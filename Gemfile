@@ -22,10 +22,12 @@ end
 
 group :development do
   gem 'rspec-rails'
+  gem "therubyracer", :require => 'v8'
 end
 
 group :test do
   gem 'rspec-rails'
+  gem "therubyracer", :require => 'v8'
 end
 
 gem 'jquery-rails'
