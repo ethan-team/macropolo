@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2088053115">
-    <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.31-0ubuntu0.12.04.2" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="1c390bec-1c7e-4dd6-a980-6f8d1a71555f">
+  <component name="DataSourceManagerImpl" format="xml" hash="1998467392">
+    <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.31-0ubuntu0.12.04.2" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="adaa5e79-0e25-4127-9c8e-06d0210228ec">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/macropolo_development</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost/macropolo_development</jdbc-url>
       <user-name>rails_zhubaijia</user-name>
       <user-password>dfd9dfdbdfc6dff5dfdadfdddfcedff5dfd0dfc2dfdfdfc8dfcbdfc3dfc0dfc3dfcb</user-password>
       <libraries>
         <library>
-          <url>jar://$PROJECT_DIR$/db/mysql-connector-java-5.1.22-bin.jar!/</url>
+          <url>jar://$PROJECT_DIR$/rubymine/mysql-connector-java-5.1.22-bin.jar!/</url>
         </library>
         <library>
-          <url>file://$PROJECT_DIR$/db/mysql-connector-license.txt</url>
+          <url>file://$PROJECT_DIR$/rubymine/mysql-connector-license.txt</url>
         </library>
       </libraries>
     </data-source>

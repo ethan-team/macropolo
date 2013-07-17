@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.31-0ubuntu0.12.04.2" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="1c390bec-1c7e-4dd6-a980-6f8d1a71555f">
+  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.31-0ubuntu0.12.04.2" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="adaa5e79-0e25-4127-9c8e-06d0210228ec">
     <extra-name-characters>#@</extra-name-characters>
     <identifier-quote-string>`</identifier-quote-string>
     <synchronize>true</synchronize>
     <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-    <jdbc-url>jdbc:mysql://localhost:3306/macropolo_development</jdbc-url>
+    <jdbc-url>jdbc:mysql://localhost/macropolo_development</jdbc-url>
     <user-name>rails_zhubaijia</user-name>
     <user-password>dfd9dfdbdfc6dff5dfdadfdddfcedff5dfd0dfc2dfdfdfc8dfcbdfc3dfc0dfc3dfcb</user-password>
     <libraries>
       <library>
-        <url>jar://$PROJECT_DIR$/db/mysql-connector-java-5.1.22-bin.jar!/</url>
+        <url>jar://$PROJECT_DIR$/rubymine/mysql-connector-java-5.1.22-bin.jar!/</url>
       </library>
       <library>
-        <url>file://$PROJECT_DIR$/db/mysql-connector-license.txt</url>
+        <url>file://$PROJECT_DIR$/rubymine/mysql-connector-license.txt</url>
       </library>
     </libraries>
     <schema name="" catalog="TestRails2_development"/>
@@ -984,6 +984,30 @@
       <column name="SECURITY_TYPE" sqlType="VARCHAR" length="7" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
       <column name="CHARACTER_SET_CLIENT" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
       <column name="COLLATION_CONNECTION" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
+    </table>
+    <table name="active_admin_comments" schema="" catalog="macropolo_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="resource_id" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="resource_type" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="author_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="author_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="body" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="namespace" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="index_admin_notes_on_resource_type_and_resource_id" unique="false" columns="resource_type,resource_id"/>
+      <index name="index_active_admin_comments_on_namespace" unique="false" columns="namespace"/>
+      <index name="index_active_admin_comments_on_author_type_and_author_id" unique="false" columns="author_type,author_id"/>
+    </table>
+    <table name="offer_types" schema="" catalog="macropolo_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="code" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="name_cn" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="name_en" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
     </table>
     <table name="roles" schema="" catalog="macropolo_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
