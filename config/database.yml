@@ -1,5 +1,5 @@
 # MySQL.  Versions 4.1 and 5.0 are recommended.
-# 
+#
 # Install the MYSQL driver
 #   gem install mysql2
 #
@@ -40,3 +40,6 @@ production:
   username: rails_zhubaijia
   password: sql_pwd_zhubaijia
   socket: /var/run/mysqld/mysqld.sock
+
+cucumber:
+  <<: 
