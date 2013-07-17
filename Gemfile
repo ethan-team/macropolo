@@ -1,8 +1,13 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
 gem 'rails', '3.2.13'
+
+#database
 #gem 'sqlite3'
 gem 'mysql2'
+
+#plug-ins
+gem 'activeadmin'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -12,7 +17,7 @@ group :assets do
 end
 
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.3.0'
 gem 'bootstrap-sass'
 gem 'cancan'
 gem 'devise'

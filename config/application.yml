@@ -7,9 +7,11 @@
 # makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
 # Add application configuration variables here, as shown below.
 #
-GMAIL_USERNAME: Your_Username
-GMAIL_PASSWORD: Your_Password
-ADMIN_NAME: First User
-ADMIN_EMAIL: user@example.com
-ADMIN_PASSWORD: changeme
-ROLES: [admin, user, VIP]
+GMAIL_USERNAME: info1.zhubaijia@gmail.com
+GMAIL_PASSWORD: zbj:gmail88
+
+ADMIN_NAME: admin
+ADMIN_EMAIL: admin@zhubaijia.com
+ADMIN_PASSWORD: zhubaijia88
+
+ROLES: [admin, site_admin, operation_admin, opration_host, operation_guest, user]
