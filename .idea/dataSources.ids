@@ -1008,6 +1008,9 @@
       <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <index name="index_offer_types_on_code" unique="true" columns="code"/>
+      <index name="index_offer_types_on_name_cn" unique="true" columns="name_cn"/>
+      <index name="index_offer_types_on_name_en" unique="true" columns="name_en"/>
     </table>
     <table name="roles" schema="" catalog="macropolo_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>

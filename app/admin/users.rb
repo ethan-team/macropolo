@@ -1,4 +1,6 @@
 ActiveAdmin.register User do
+  menu :parent => "Account"
+
   def scoped_collection
     User.includes(:roles)
   end
