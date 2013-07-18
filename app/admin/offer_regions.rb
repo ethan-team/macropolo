@@ -7,9 +7,9 @@ ActiveAdmin.register OfferRegion do
     column :code
     column :name_cn
     column :name_en
-    column :parent_id
+    column :parent 
   end
 
-  config.filters = false
+  filter :parent
 
 end

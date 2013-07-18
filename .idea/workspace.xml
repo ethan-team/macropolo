@@ -4,9 +4,8 @@
     <list default="true" id="88749486-43d6-4f28-8e2e-bf37dde5e459" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pending rail models.txt" afterPath="$PROJECT_DIR$/pending rail models.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/users.rb" afterPath="$PROJECT_DIR$/app/admin/users.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="macropolo.iws" />
@@ -32,7 +31,7 @@
     <file path="/fragment.rb" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374062481054" ignored="false" />
     <file path="/user.rb" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374065514426" ignored="false" />
     <file path="/users.rb" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374117509323" ignored="false" />
-    <file path="/seeds.rb" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374117215855" ignored="false" />
+    <file path="/seeds.rb" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374117768290" ignored="false" />
     <file path="/20130717160245_create_offer_types.rb" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374077689678" ignored="false" />
     <file path="/offer_types.rb" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374081049879" ignored="false" />
     <file path="/offer_region.rb" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374115329486" ignored="false" />
@@ -62,112 +61,7 @@
     <favorites_list name="macropolo" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="users.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/admin/users.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="26" selection-start="55" selection-end="55" vertical-scroll-proportion="0.01664817">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RailsDependency/#macropolo" pinned="false" current="false" current-in-tab="false">
-        <entry file="uml://RailsDependency/#macropolo">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>RailsDependency</ID>
-              <OriginalElement>#macropolo</OriginalElement>
-              <nodes>
-                <node x="268.0" y="0.0">User</node>
-                <node x="0.0" y="341.0">OfferRegion</node>
-                <node x="0.0" y="562.0">Ability</node>
-                <node x="0.0" y="83.5">Role</node>
-                <node x="289.0" y="341.0">OfferType</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="Role" target="User">
-                  <point x="94.0" y="-0.0" />
-                  <point x="-224.5" y="-0.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-57.0" y="74.0" />
-              <SelectedNodes>
-                <node>OfferRegion</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Association fields</Category>
-                <Category>Migration fields</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offer_types.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/offer_types.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="9" selection-start="35" selection-end="202" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20130717160245_create_offer_types.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130717160245_create_offer_types.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="5" selection-start="201" selection-end="247" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offer_regions.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/offer_regions.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="6" selection-start="38" selection-end="62" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roles.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/roles.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="26" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20130718021213_create_offer_regions.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130718021213_create_offer_regions.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="28" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="31" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="34" selection-start="2929" selection-end="2929" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -202,9 +96,9 @@
         <option value="$PROJECT_DIR$/app/models/offer_region.rb" />
         <option value="$PROJECT_DIR$/app/admin/offer_regions.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130718021213_create_offer_regions.rb" />
-        <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/admin/roles.rb" />
         <option value="$PROJECT_DIR$/app/admin/users.rb" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
       </list>
     </option>
   </component>
@@ -216,10 +110,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1920" />
-    <option name="y" value="24" />
-    <option name="width" value="1920" />
-    <option name="height" value="1056" />
+    <option name="x" value="2081" />
+    <option name="y" value="212" />
+    <option name="width" value="1918" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -687,14 +581,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="2081" y="212" width="1918" height="1027" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.120855615" sideWeight="0.58791804" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12098501" sideWeight="0.58791804" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17754011" sideWeight="0.58791804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17773019" sideWeight="0.58791804" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.412082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -837,7 +731,7 @@
               <point x="-224.5" y="-0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-57.0" y="74.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="359.0" y="271.0" />
           <SelectedNodes>
             <node>OfferRegion</node>
           </SelectedNodes>
@@ -857,56 +751,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/offer_types.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="9" selection-start="35" selection-end="202" vertical-scroll-proportion="0.0">
+        <state line="4" column="9" selection-start="35" selection-end="202" vertical-scroll-proportion="0.06659268">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
+        <state line="9" column="31" selection-start="502" selection-end="502" vertical-scroll-proportion="0.14578834">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130717160245_create_offer_types.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="5" selection-start="201" selection-end="247" vertical-scroll-proportion="0.0">
+        <state line="9" column="5" selection-start="201" selection-end="247" vertical-scroll-proportion="0.14578834">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130718021213_create_offer_regions.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="28" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="34" selection-start="2929" selection-end="2929" vertical-scroll-proportion="0.0">
+        <state line="17" column="28" selection-start="382" selection-end="382" vertical-scroll-proportion="0.27537796">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/offer_regions.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="38" selection-end="62" vertical-scroll-proportion="0.0">
+        <state line="3" column="6" selection-start="38" selection-end="62" vertical-scroll-proportion="0.048596114">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/roles.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="26" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
+        <state line="1" column="26" selection-start="55" selection-end="55" vertical-scroll-proportion="0.016198704">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="2" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.8411829">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/users.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="26" selection-start="55" selection-end="55" vertical-scroll-proportion="0.01664817">
+        <state line="35" column="28" selection-start="640" selection-end="640" vertical-scroll-proportion="0.5826859">
           <folding />
         </state>
       </provider>

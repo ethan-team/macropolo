@@ -55,6 +55,17 @@ begin
   orTL   = OfferRegion.create!(code: 3,  name_cn:"泰国",    name_en:"Thailand",   parent_id: orRoot.id)
   orSK   = OfferRegion.create!(code: 4,  name_cn:"韩国",    name_en:"Korea",      parent_id: orRoot.id)
   orIN   = OfferRegion.create!(code: 5,  name_cn:"印尼",    name_en:"Indonesia ", parent_id: orRoot.id)
+
+  orHK1   = OfferRegion.create!(code: 101,  name_cn:"香港岛",  name_en:"Hong Kong island",  parent_id: orHK.id)
+  orHK2   = OfferRegion.create!(code: 102,  name_cn:"九龙",    name_en:"Kowloon",  parent_id: orHK.id)
+  orHK3   = OfferRegion.create!(code: 103,  name_cn:"新界",    name_en:"The New Territories",  parent_id: orHK.id)
+
+  orHK11   = OfferRegion.create!(code: 1011,  name_cn:"中西区",  name_en:"CW",  parent_id: orHK1.id)
+  orHK12   = OfferRegion.create!(code: 1012,  name_cn:"东区",    name_en:"E ",  parent_id: orHK1.id)
+  orHK13   = OfferRegion.create!(code: 1013,  name_cn:"湾仔区",  name_en:"WZ",  parent_id: orHK1.id)
+  orHK14   = OfferRegion.create!(code: 1014,  name_cn:"南区",    name_en:"N",   parent_id: orHK1.id)
+
+
 rescue Exception => e
   puts "*Alert*: OfferRegion is not an empty database !"
 end

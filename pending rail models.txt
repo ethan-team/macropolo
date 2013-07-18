@@ -1,4 +1,8 @@
 rails generate scaffold Offer name_cn:string search_nearby_landmarks:string search_map:string area_cn:string sub_city_cn:string city_cn:string country_cn:string contact_info_cn:string contact_phone1:string contact_phone2:string contact_email:string remark_cn:string longitude:float public_longtitude:float latitude:float public_latitude:float room_count:integer bedroom_count:integer bathroom_count:integer max_occupancy:integer bed_count:integer search_rank:integer min_nights:integer max_nights:integer size_in_m2:integer checkin_after:integer checkout_before:integer main_photo_id:integer
 
 
-rails generate scaffold Offer title:string description:text amenities:text rules:string address:string zip:string city:string sub_city:string country_name:string contact_info:string contact_phone1:string contact_phone2:string contact_email:string remark:string longitude:float latitude:float offer_type:string unit_type:string 
+rails generate scaffold Offer title:string description:text amenities:text rules:string address:string zip:string city:string sub_city:string country_name:string contact_info:string contact_phone1:string contact_phone2:string contact_email:string remark:string longitude:float latitude:float offer_type:string unit_type:string
+
+
+
+net use x: \\vboxsvr\share
