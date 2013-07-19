@@ -23,35 +23,44 @@ puts "Role seeded"
 puts 'User'
 user1 = User.find_or_create_by_email :name => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup
 user1.add_role :admin
+puts "  user #{ENV['ADMIN_EMAIL']}"
 
 user2 = User.find_or_create_by_email name:"site_admin", email:"site_admin@zhubaijia.com",      password:"12345678", password_confirmation:"12345678"  
 user2.add_role :site_admin
+puts "  user site_admin@zhubaijia.com"
 
 user3 = User.find_or_create_by_email name:"operation_admin", email:"operation_admin@zhubaijia.com",     password:"12345678", password_confirmation:"12345678"
 user3.add_role :opration_admin
+puts "  user operation_admin@zhubaijia.com"
 
 user4 = User.find_or_create_by_email name:"operation_host", email:"operation_host@zhubaijia.com", password:"12345678", password_confirmation:"12345678"
 user4.add_role :operation_host
+puts "  user operation_host@zhubaijia.com"
 
 user4 = User.find_or_create_by_email name:"operation_guest", email:"operation_guest@zhubaijia.com", password:"12345678", password_confirmation:"12345678"
 user4.add_role :operation_guest
+puts "  user operation_guest@zhubaijia.com"
 
-user5 = User.find_or_create_by_email name:"user", email:"user@gmail.com",  password:"11111111", password_confirmation:"11111111"
+user5 = User.find_or_create_by_email name:"user", email:"user@gmail.com",  password:"12345678", password_confirmation:"12345678"
 user5.add_role :user 
+puts "  user user@gmail.com"
 
 user5 = User.find_or_create_by_email name:"ethan", email:"ethan.jiang@zhubaijia.com",  password:"12345678", password_confirmation:"12345678"
 user5.add_role :site_admin
 user5.add_role :operation_admin
+puts "  user ethan.jiang@zhubaijia.com"
 
 user6 = User.find_or_create_by_email name:"ann", email:"ann.wang@zhubaijia.com",  password:"12345678", password_confirmation:"12345678"
 user6.add_role :operation_admin
+puts "  user ann.wang@zhubaijia.com"
 
 user7 = User.find_or_create_by_email name:"ken", email:"ken.zhang@zhubaijia.com",  password:"12345678", password_confirmation:"12345678"
 user7.add_role :operation_host
+puts "  user ken.zhang@zhubaijia.com"
 
 user8 = User.find_or_create_by_email name:"shanon", email:"shanon.li@zhubaijia.com",  password:"12345678", password_confirmation:"12345678"
 user8.add_role :operation_guest
-
+puts "  user shannon.li@zhubaijia.com"
 
 
 puts "User seeded"
@@ -78,7 +87,7 @@ begin
 rescue Exception => e
   puts "*Alert*: OfferType is not an empty database!"
 end
-puts "OfferTypes seeded"
+puts "OfferType seeded"
 
 # OfferRegion
 puts "OfferRegion"
