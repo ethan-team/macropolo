@@ -20,48 +20,47 @@ end
 puts "Role seeded"
 
 #User
+def seed_user arg
+  arg[:password] = "12345678" unless arg[:password]
+  arg[:password_confirmation] = arg[:password]
+  arg[:name] = "nobody" unless arg[:name]
+  arg[:email] = "nobody@nowhere.com" unless arg[:email]
+  u = User.find_or_create_by_name arg  
+  puts "  user #{arg[:email]}"
+  u 
+end
+
 puts 'User'
-user1 = User.find_or_create_by_email :name => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup
-user1.add_role :admin
-puts "  user #{ENV['ADMIN_EMAIL']}"
+u0 = seed_user :name => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup
+u0.add_role :admin
 
-user2 = User.find_or_create_by_email name:"site_admin", email:"site_admin@zhubaijia.com",      password:"12345678", password_confirmation:"12345678"  
-user2.add_role :site_admin
-puts "  user site_admin@zhubaijia.com"
+u1 = seed_user name:"site_admin", email:"site_admin@zhubaijia.com"
+u1.add_role :site_admin
 
-user3 = User.find_or_create_by_email name:"operation_admin", email:"operation_admin@zhubaijia.com",     password:"12345678", password_confirmation:"12345678"
-user3.add_role :opration_admin
-puts "  user operation_admin@zhubaijia.com"
+u2 = seed_user name:"operation_admin", email:"operation_admin@zhubaijia.com"
+u2.add_role :opration_admin
 
-user4 = User.find_or_create_by_email name:"operation_host", email:"operation_host@zhubaijia.com", password:"12345678", password_confirmation:"12345678"
-user4.add_role :operation_host
-puts "  user operation_host@zhubaijia.com"
+u3 = seed_user name:"operation_host", email:"operation_host@zhubaijia.com"
+u3.add_role :operation_host
 
-user4 = User.find_or_create_by_email name:"operation_guest", email:"operation_guest@zhubaijia.com", password:"12345678", password_confirmation:"12345678"
-user4.add_role :operation_guest
-puts "  user operation_guest@zhubaijia.com"
+u4 = seed_user name:"operation_guest", email:"operation_guest@zhubaijia.com"
+u4.add_role :operation_guest
 
-user5 = User.find_or_create_by_email name:"user", email:"user@gmail.com",  password:"12345678", password_confirmation:"12345678"
-user5.add_role :user 
-puts "  user user@gmail.com"
+u5 = seed_user name:"user", email:"user@gmail.com"
+u5.add_role :user 
 
-user5 = User.find_or_create_by_email name:"ethan", email:"ethan.jiang@zhubaijia.com",  password:"12345678", password_confirmation:"12345678"
-user5.add_role :site_admin
-user5.add_role :operation_admin
-puts "  user ethan.jiang@zhubaijia.com"
+u6 = seed_user name:"ethan", email:"ethan.jiang@zhubaijia.com"
+u6.add_role :site_admin
+u6.add_role :operation_admin
 
-user6 = User.find_or_create_by_email name:"ann", email:"ann.wang@zhubaijia.com",  password:"12345678", password_confirmation:"12345678"
-user6.add_role :operation_admin
-puts "  user ann.wang@zhubaijia.com"
+u7 = seed_user name:"ann", email:"ann.wang@zhubaijia.com"
+u7.add_role :operation_admin
 
-user7 = User.find_or_create_by_email name:"ken", email:"ken.zhang@zhubaijia.com",  password:"12345678", password_confirmation:"12345678"
-user7.add_role :operation_host
-puts "  user ken.zhang@zhubaijia.com"
+u8 = seed_user name:"ken", email:"ken.zhang@zhubaijia.com"
+u8.add_role :operation_host
 
-user8 = User.find_or_create_by_email name:"shanon", email:"shanon.li@zhubaijia.com",  password:"12345678", password_confirmation:"12345678"
-user8.add_role :operation_guest
-puts "  user shannon.li@zhubaijia.com"
-
+u9 = seed_user name:"shanon", email:"shanon.li@zhubaijia.com"
+u9.add_role :operation_guest
 
 puts "User seeded"
 
@@ -118,10 +117,26 @@ puts "OfferRegion seeded"
 # OfferOwner
 puts "OfferOwner"
 begin
-  OfferOwner.create!(name_cn:"Alibaba", name_en:"Alibaba", supplier_name: "Alibaba", contact_person:"Ma Yun", phone: "12345678")
-  OfferOwner.create!(name_cn:"Alibaba1", name_en:"Alibaba1", supplier_name: "Alibaba", contact_person:"Ma Yun", phone: "12345678")
+  OfferOwner.create!(name_cn:"Alibaba", name_en:"Alibaba", supplier_name: "Alibaba", contact_person:"Ma Yun 1", phone: "12345678")
+  OfferOwner.create!(name_cn:"TaoBao",  name_en:"TaoBao",  supplier_name:  "TaoBao",  contact_person:"Ma Yun 2", phone: "12345678")
+  OfferOwner.create!(name_cn:"ZhiFuBao",  name_en:"ZhiFuBao",  supplier_name:  "ZhiFuBao",  contact_person:"Ma Yun 3", phone: "12345678")
 
 rescue Exception => e
   puts "*Alert*: OfferOwner is not an empty database !"
 end
 puts "OfferOwner seeded"
+
+
+# OfferStatus
+puts "OfferStatus"
+begin
+  OfferStatus.create!(code:0,   name_cn:"loading",              name_en:"loading")
+  OfferStatus.create!(code:1,   name_cn:"waiting for approval", name_en:"waiting for approval" )
+  OfferStatus.create!(code:2,   name_cn:"off stock",            name_en:"off stock")
+  OfferStatus.create!(code:3,   name_cn:"on hold",              name_en:"on hold")
+  OfferStatus.create!(code:10,  name_cn:"on stock",             name_en:"on stock")
+
+rescue Exception => e
+  puts "*Alert*: OfferStatus is not an empty database!"
+end
+puts "OfferStatus seeded"
