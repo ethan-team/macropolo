@@ -1,5 +1,6 @@
 ActiveAdmin.register OfferStatus do
-   menu :parent => "Offer"
+  menu :parent => "Offer"
+  actions :all, :except => [:destroy]
 
   index :download_links => false do
     column :id
@@ -8,11 +9,5 @@ ActiveAdmin.register OfferStatus do
     column :name_en
   end
 
-  index :as=> :grid do |os|
-  	link_to(ot.name_cn,admin_offer_status_path(os))
-  end 
-
-  filter :code
-  filter :name_cn
-  filter :name_en
+  config.filters = false
 end

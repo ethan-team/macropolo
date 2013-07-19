@@ -130,11 +130,12 @@ puts "OfferOwner seeded"
 # OfferStatus
 puts "OfferStatus"
 begin
-  OfferStatus.create!(code:0,   name_cn:"loading",              name_en:"loading")
-  OfferStatus.create!(code:1,   name_cn:"waiting for approval", name_en:"waiting for approval" )
-  OfferStatus.create!(code:2,   name_cn:"off stock",            name_en:"off stock")
-  OfferStatus.create!(code:3,   name_cn:"on hold",              name_en:"on hold")
-  OfferStatus.create!(code:10,  name_cn:"on stock",             name_en:"on stock")
+  OfferStatus.create!(code:0,    name_cn:"initiating",           name_en:"initiating")
+  OfferStatus.create!(code:1,    name_cn:"reviewing",            name_en:"reviewing")
+  OfferStatus.create!(code:2,    name_cn:"waiting for approval", name_en:"waiting for approval" )
+  OfferStatus.create!(code:10,   name_cn:"off stock",            name_en:"off stock")
+  OfferStatus.create!(code:11,   name_cn:"on hold",              name_en:"on hold")
+  OfferStatus.create!(code:100,  name_cn:"on stock",             name_en:"on stock")
 
 rescue Exception => e
   puts "*Alert*: OfferStatus is not an empty database!"

@@ -6,10 +6,22 @@ def roles_with_display_names u
   x += ">"
 end
 
+## ActiveAdmin - how to deal with build-in actions
+# 
+# Support following actions 
+#  actions :index, :show, :new, :create, :update, :edit
+# for example you can define
+# ActiveAdmin.register YourResource do 
+#  actions :all, :except => [:destroy]
+# ....
+# end 
+
 ActiveAdmin.register User do
   menu :parent => "Account"
+  actions :all, :except => [:destroy]
 
   index :download_links => false do
+    column :id 
     column "Registered email", :email
     column :name
     column "Roles" do |user|
