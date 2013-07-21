@@ -3,14 +3,14 @@ source 'https://rubygems.org'
 Encoding.default_external = Encoding::UTF_8
 Encoding.default_internal = Encoding::UTF_8
 
-#ruby '1.9.3'
-ruby '2.0.0'
+ruby '1.9.3'
+#ruby '2.0.0'
 gem 'rails', '3.2.13'
 
 #database
 #gem 'sqlite3'
-#gem 'mysql2'
-gem 'pg'      #for heroku
+gem 'mysql2'
+#gem 'pg'      #for heroku
 
 #plug-ins
 gem 'activeadmin'

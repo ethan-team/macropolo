@@ -108,16 +108,16 @@ ActiveRecord::Schema.define(:version => 20130719152553) do
     t.string   "contact_phone"
     t.string   "contact_mobile"
     t.string   "contact_email"
-    t.decimal  "checkin_after"
-    t.decimal  "checkout_before"
+    t.decimal  "checkin_after",    :precision => 10, :scale => 0
+    t.decimal  "checkout_before",  :precision => 10, :scale => 0
     t.text     "nearby_cn"
     t.text     "nearby_en"
     t.text     "amenities_cn"
     t.text     "amenities_en"
     t.text     "rules_cn"
     t.text     "rules_en"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                                      :null => false
+    t.datetime "updated_at",                                      :null => false
   end
 
   add_index "offers", ["offer_owner_id"], :name => "index_offers_on_offer_owner_id"
