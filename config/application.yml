@@ -11,7 +11,7 @@ GMAIL_USERNAME: info1.zhubaijia@gmail.com
 GMAIL_PASSWORD: zbj:gmail88
 
 ADMIN_NAME: admin
-ADMIN_EMAIL: admin@zhubaijia.com
-ADMIN_PASSWORD: zhubaijia88
+ADMIN_EMAIL: admin@macropolo.com
+ADMIN_PASSWORD: sql_pwd_macropolo
 
 ROLES: [admin, site_admin, operation_admin, opration_host, operation_guest, user]

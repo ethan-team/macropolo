@@ -34,6 +34,9 @@ puts 'User'
 u0 = seed_user :name => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup
 u0.add_role :admin
 
+u1 = seed_user name:"admin", email:"admin@zhubaijia.com"
+u1.add_role :admin
+
 u1 = seed_user name:"site_admin", email:"site_admin@zhubaijia.com"
 u1.add_role :site_admin
 
