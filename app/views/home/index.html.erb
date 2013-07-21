@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="hero-unit">
-      <%= form_tag( { :controller => "home", :action => "search" }  ,  :method => :post) do |f| %>
+      <%= form_tag( { :controller => "search", :action => "index" }  ,  :method => :post) do |f| %>
           <%= label_tag("Want to explore?") %>
           <%= search_field_tag("city", "city", :class=>"search-query") %>
           <%= submit_tag("search", :class=>"btn btn-inverse") %>
