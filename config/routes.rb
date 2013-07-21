@@ -3,7 +3,8 @@ Macropolo::Application.routes.draw do
   resources :offers
 
   root :to => "home#index"
-  get "/search", :to => "home#search" 
+  get  "/search", :to => "home#search" 
+  post "/search", :to => "home#search"
 
   ActiveAdmin.routes(self)
 

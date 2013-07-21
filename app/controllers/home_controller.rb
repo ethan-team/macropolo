@@ -4,6 +4,6 @@ class HomeController < ApplicationController
   end
 
   def search
-  	@offers = Offer.all
+  	@offers = Offer.order("id").page(params[:page]).per(10)
   end
 end

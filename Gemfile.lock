@@ -237,6 +237,7 @@ DEPENDENCIES
   factory_girl_rails
   figaro
   jquery-rails (~> 2.3.0)
+  kaminari
   launchy
   mysql2
   quiet_assets

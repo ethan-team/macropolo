@@ -15,6 +15,7 @@ gem 'mysql2'
 #plug-ins
 gem 'activeadmin'
 gem 'country_select'
+gem 'kaminari'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
