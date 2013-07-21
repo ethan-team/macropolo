@@ -1,4 +1,9 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
+<div class="container-fluid">
+    <div class="hero-unit">
+      <%= form_tag( search_path,  :method => :get) do |f| %>
+          <%= label_tag("Want to explore?") %>
+          <%= search_field_tag("city", "city", :class=>"search-query") %>
+          <%= submit_tag("search", :class=>"btn btn-inverse") %>
+      <% end %>
+    </div>
+</div>

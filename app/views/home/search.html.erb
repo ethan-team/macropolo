@@ -1,0 +1,4 @@
+<h3>List of Offers </h3>
+<% @offers.each do |offer| %>
+  <p>Offer: <%=link_to offer.name_cn, offer %></p>
+<% end %>

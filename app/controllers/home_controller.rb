@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @users = User.all
+    
+  end
+
+  def search
+  	@offers = Offer.all
   end
 end

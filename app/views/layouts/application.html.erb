@@ -13,7 +13,7 @@
     <div class="navbar navbar-fixed-top">
       <nav class="navbar-inner">
         <div class="container">
-          <%= render 'layouts/navigation' %>
+          <%= render 'layouts/application_navigation' %>
         </div>
       </nav>
     </div>
@@ -22,14 +22,17 @@
         <div class="content">
            <div class="row">
             <div class="span12">
-              <%= render 'layouts/messages' %>
+              <%= render 'layouts/application_messages' %>
               <%= yield %>
             </div>
           </div>
-          <footer>
-          </footer>
         </div>
       </div> <!--! end of .container -->
     </div> <!--! end of #main -->
+    <div class="footer">
+      <footer>
+        <%= render 'layouts/application_footer' %>
+      </footer>
+    </div>
   </body>
 </html>
