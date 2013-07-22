@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :offer_owner do
-    name_cn "MyString"
+    name "MyString"
     name_en "MyString"
     supplier_name "MyString"
     contact_person "MyString"

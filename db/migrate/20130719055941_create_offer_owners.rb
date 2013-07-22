@@ -1,7 +1,7 @@
 class CreateOfferOwners < ActiveRecord::Migration
   def change
     create_table :offer_owners do |t|
-      t.string :name_cn
+      t.string :name
       t.string :name_en
       t.string :supplier_name
       t.string :contact_person

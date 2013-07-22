@@ -5,7 +5,7 @@ ActiveAdmin.register OfferRegion do
   index :download_links => false do
     column :id
     column :code
-    column :name_cn
+    column :name
     column :name_en
     column :parent
     default_actions 

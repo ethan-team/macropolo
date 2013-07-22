@@ -1,11 +1,11 @@
 class OfferType < ActiveRecord::Base
   has_many :offer
 
-  attr_accessible :code, :name_cn, :name_en
+  attr_accessible :code, :name, :name_en
 
   #required by ActiveAdmin
   def display_name
-    "#{name_cn} , #{name_en}"
+    "#{name} , #{name_en}"
   end
 
 end

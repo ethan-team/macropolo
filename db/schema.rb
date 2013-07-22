@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20130719152553) do
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
 
   create_table "offer_owners", :force => true do |t|
-    t.string   "name_cn"
+    t.string   "name"
     t.string   "name_en"
     t.string   "supplier_name"
     t.string   "contact_person"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(:version => 20130719152553) do
 
   create_table "offer_regions", :force => true do |t|
     t.integer  "code"
-    t.string   "name_cn"
+    t.string   "name"
     t.string   "name_en"
     t.integer  "parent_id"
     t.float    "latitude"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(:version => 20130719152553) do
 
   create_table "offer_statuses", :force => true do |t|
     t.integer  "code"
-    t.string   "name_cn"
+    t.string   "name"
     t.string   "name_en"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -73,26 +73,26 @@ ActiveRecord::Schema.define(:version => 20130719152553) do
 
   create_table "offer_types", :force => true do |t|
     t.integer  "code"
-    t.string   "name_cn"
+    t.string   "name"
     t.string   "name_en"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   add_index "offer_types", ["code"], :name => "index_offer_types_on_code", :unique => true
-  add_index "offer_types", ["name_cn"], :name => "index_offer_types_on_name_cn", :unique => true
+  add_index "offer_types", ["name"], :name => "index_offer_types_on_name", :unique => true
   add_index "offer_types", ["name_en"], :name => "index_offer_types_on_name_en", :unique => true
 
   create_table "offers", :force => true do |t|
-    t.string   "name_cn"
+    t.integer  "code"
+    t.string   "name"
     t.string   "name_en"
     t.integer  "offer_owner_id"
     t.integer  "offer_region_id"
     t.integer  "offer_status_id"
     t.integer  "offer_type_id"
-    t.text     "description_cn"
-    t.text     "description_en"
-    t.string   "address_cn"
+    t.text     "description"
+    t.string   "address"
     t.string   "address_en"
     t.float    "longitude"
     t.float    "latitude"
@@ -110,16 +110,15 @@ ActiveRecord::Schema.define(:version => 20130719152553) do
     t.string   "contact_email"
     t.decimal  "checkin_after",    :precision => 10, :scale => 0
     t.decimal  "checkout_before",  :precision => 10, :scale => 0
-    t.text     "nearby_cn"
-    t.text     "nearby_en"
-    t.text     "amenities_cn"
-    t.text     "amenities_en"
-    t.text     "rules_cn"
-    t.text     "rules_en"
+    t.text     "nearby"
+    t.text     "amenities"
+    t.text     "rules"
+    t.text     "remark"
     t.datetime "created_at",                                      :null => false
     t.datetime "updated_at",                                      :null => false
   end
 
+  add_index "offers", ["code"], :name => "index_offers_on_code", :unique => true
   add_index "offers", ["offer_owner_id"], :name => "index_offers_on_offer_owner_id"
   add_index "offers", ["offer_region_id"], :name => "index_offers_on_offer_region_id"
   add_index "offers", ["offer_status_id"], :name => "index_offers_on_offer_status_id"

@@ -2,7 +2,7 @@ class CreateOfferRegions < ActiveRecord::Migration
   def change
     create_table :offer_regions do |t|
       t.integer :code
-      t.string :name_cn
+      t.string :name
       t.string :name_en
       t.integer :parent_id
       t.float :latitude

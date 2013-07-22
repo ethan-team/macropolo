@@ -5,6 +5,7 @@ ActiveAdmin.register Role do
   index :download_links => false do
     column :id
     column :name
+    column :resource_id
     column :resource_type
   end
 

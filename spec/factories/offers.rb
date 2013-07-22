@@ -2,15 +2,14 @@
 
 FactoryGirl.define do
   factory :offer do
-    name_cn "MyString"
+    name "MyString"
     name_en "MyString"
     offer_owner nil
     offer_region nil
     offer_status nil
     offer_type nil
-    description_cn "MyText"
-    description_en "MyText"
-    address_cn "MyString"
+    description "MyText"
+    address "MyString"
     address_en "MyString"
     longitude 1.5
     latitude 1.5
@@ -28,11 +27,8 @@ FactoryGirl.define do
     contact_email "MyString"
     checkin_after "9.99"
     checkout_before "9.99"
-    nearby_cn "MyText"
-    nearby_en "MyText"
-    amenities_cn "MyText"
-    amenities_en "MyText"
-    rules_cn "MyText"
-    rules_en "MyText"
+    nearby "MyText"
+    amenities "MyText"
+    rules "MyText"
   end
 end

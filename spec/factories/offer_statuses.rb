@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :offer_status do
     code 1
-    name_cn "MyString"
+    name "MyString"
     name_en "MyString"
   end
 end

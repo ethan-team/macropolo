@@ -4,7 +4,7 @@ ActiveAdmin.register OfferOwner do
 
   index :download_links => false do
     column :id
-    column :name_cn
+    column :name
     column :name_en
     column :supplier_name
     column :phone
@@ -22,7 +22,7 @@ ActiveAdmin.register OfferOwner do
     default_actions  
   end
 
-  filter :name_cn
+  filter :name
   filter :name_en
   filter :supplier_name
   filter :email

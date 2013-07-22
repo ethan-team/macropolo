@@ -5,7 +5,7 @@ ActiveAdmin.register OfferStatus do
   index :download_links => false do
     column :id
     column :code
-    column :name_cn
+    column :name
     column :name_en
   end
 

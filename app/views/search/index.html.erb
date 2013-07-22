@@ -1,6 +1,6 @@
 <h3>List of Offers </h3>
 <h4>  you are searching: <%= params[:city] %> </h4>
 <% @offers.each do |offer| %>
-  <p><%=link_to offer.name_cn, offer %></p>
+  <p><%=link_to offer.name, offer %></p>
 <% end %>
 <%= paginate @offers %>
