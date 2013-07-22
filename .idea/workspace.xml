@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88749486-43d6-4f28-8e2e-bf37dde5e459" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130722055240_create_offer_sources.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/offer_source.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/offer_source_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/admin/offer_sources.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/offer_sources.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130719152553_create_offers.rb" afterPath="$PROJECT_DIR$/db/migrate/20130719152553_create_offers.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/macropolo.iml" afterPath="$PROJECT_DIR$/.idea/macropolo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer.rb" afterPath="$PROJECT_DIR$/app/models/offer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer_owner.rb" afterPath="$PROJECT_DIR$/app/models/offer_owner.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer_region.rb" afterPath="$PROJECT_DIR$/app/models/offer_region.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer_source_currency_type.rb" afterPath="$PROJECT_DIR$/app/models/offer_source_currency_type.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer_status.rb" afterPath="$PROJECT_DIR$/app/models/offer_status.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer_type.rb" afterPath="$PROJECT_DIR$/app/models/offer_type.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="88749486-43d6-4f28-8e2e-bf37dde5e459" name="Default" comment="" />
     <ignored path="macropolo.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374473978423" ignored="false" />
@@ -83,17 +67,18 @@
               <ID>RailsDependency</ID>
               <OriginalElement>#macropolo</OriginalElement>
               <nodes>
-                <node x="1012.0" y="1187.0">CurrencyToRmbRate</node>
                 <node x="821.0" y="726.0">User</node>
-                <node x="0.0" y="726.0">OfferOwner</node>
-                <node x="0.0" y="1187.0">OfferRegion</node>
-                <node x="0.0" y="1408.0">Ability</node>
-                <node x="553.0" y="809.5">Role</node>
-                <node x="1234.0" y="1187.0">OfferSourceType</node>
-                <node x="518.0" y="1187.0">OfferType</node>
+                <node x="0.0" y="1408.0">OfferSourceType</node>
+                <node x="747.0" y="1187.0">BookingStatus</node>
                 <node x="0.0" y="0.0">Offer</node>
                 <node x="837.0" y="252.0">OfferSource</node>
-                <node x="747.0" y="1187.0">OfferSourceCurrencyType</node>
+                <node x="976.0" y="1187.0">OfferSourceCurrencyType</node>
+                <node x="1241.0" y="1187.0">CurrencyToRmbRate</node>
+                <node x="0.0" y="726.0">OfferOwner</node>
+                <node x="0.0" y="1187.0">OfferRegion</node>
+                <node x="553.0" y="809.5">Role</node>
+                <node x="209.0" y="1408.0">Ability</node>
+                <node x="518.0" y="1187.0">OfferType</node>
                 <node x="289.0" y="1187.0">OfferStatus</node>
               </nodes>
               <notes />
@@ -107,7 +92,7 @@
                   <point x="-116.5" y="-0.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.6157534246575342" x="699.0044493882092" y="660.0" />
+              <settings layout="Hierarchic Group" zoom="0.6157534246575342" x="689.2602892102336" y="612.091212458287" />
               <SelectedNodes>
                 <node>Offer</node>
               </SelectedNodes>
@@ -168,10 +153,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1920" />
-    <option name="y" value="24" />
-    <option name="width" value="1920" />
-    <option name="height" value="1056" />
+    <option name="x" value="1793" />
+    <option name="y" value="526" />
+    <option name="width" value="1908" />
+    <option name="height" value="997" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -689,14 +674,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
+    <frame x="1793" y="526" width="1908" height="997" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.120855615" sideWeight="0.97411" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12163617" sideWeight="0.97411" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.05989305" sideWeight="0.97411" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.060279872" sideWeight="0.97411" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.412082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -881,17 +866,18 @@
           <ID>RailsDependency</ID>
           <OriginalElement>#macropolo</OriginalElement>
           <nodes>
-            <node x="1012.0" y="1187.0">CurrencyToRmbRate</node>
             <node x="821.0" y="726.0">User</node>
+            <node x="747.0" y="1187.0">BookingStatus</node>
+            <node x="0.0" y="1408.0">OfferSourceType</node>
+            <node x="837.0" y="252.0">OfferSource</node>
+            <node x="0.0" y="0.0">Offer</node>
+            <node x="976.0" y="1187.0">OfferSourceCurrencyType</node>
+            <node x="1241.0" y="1187.0">CurrencyToRmbRate</node>
             <node x="0.0" y="726.0">OfferOwner</node>
             <node x="0.0" y="1187.0">OfferRegion</node>
-            <node x="0.0" y="1408.0">Ability</node>
+            <node x="209.0" y="1408.0">Ability</node>
             <node x="553.0" y="809.5">Role</node>
-            <node x="1234.0" y="1187.0">OfferSourceType</node>
             <node x="518.0" y="1187.0">OfferType</node>
-            <node x="0.0" y="0.0">Offer</node>
-            <node x="837.0" y="252.0">OfferSource</node>
-            <node x="747.0" y="1187.0">OfferSourceCurrencyType</node>
             <node x="289.0" y="1187.0">OfferStatus</node>
           </nodes>
           <notes />
@@ -905,7 +891,7 @@
               <point x="-116.5" y="-0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.6157534246575342" x="699.0044493882092" y="660.0" />
+          <settings layout="Hierarchic Group" zoom="0.6157534246575342" x="689.2602892102336" y="612.091212458287" />
           <SelectedNodes>
             <node>Offer</node>
           </SelectedNodes>

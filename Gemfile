@@ -16,6 +16,7 @@ gem 'mysql2'
 gem 'activeadmin'
 gem 'country_select'
 gem 'kaminari'
+#gem 'seedbank', github: 'james2m/seedbank'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
