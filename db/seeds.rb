@@ -168,6 +168,28 @@ seed_offer_status  code:100,  name:"上架",             name_en:"on stock"
 puts "OfferStatus seeded"
 
 
+
+# OfferStatus
+puts "OfferSourceType"
+
+def seed_offer_source_type arg
+  arg[:code] = 0 unless arg[:code]
+  ost = OfferSourceType.find_by_code arg[:code]
+  ost = OfferSourceType.create! arg unless ost
+  puts "  OfferRegion: #{ost.code} #{ost.name} "
+  ost
+end
+
+seed_offer_source_type  code:0,    name:"self"
+seed_offer_source_type  code:1,    name:"airbnb"
+seed_offer_source_type  code:2,    name:"wimdu"
+seed_offer_source_type  code:3,    name:"THH"
+seed_offer_source_type  code:4,    name:"unknown"
+
+
+puts "OfferSourceType seeded"
+
+
 #Offer
 puts "Offer"
 

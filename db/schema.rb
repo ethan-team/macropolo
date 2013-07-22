@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130719152553) do
+ActiveRecord::Schema.define(:version => 20130722040133) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -63,6 +63,13 @@ ActiveRecord::Schema.define(:version => 20130719152553) do
   add_index "offer_regions", ["code"], :name => "index_offer_regions_on_code", :unique => true
   add_index "offer_regions", ["parent_id"], :name => "index_offer_regions_on_parent_id"
 
+  create_table "offer_source_types", :force => true do |t|
+    t.integer  "code"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "offer_statuses", :force => true do |t|
     t.integer  "code"
     t.string   "name"
@@ -91,6 +98,7 @@ ActiveRecord::Schema.define(:version => 20130719152553) do
     t.integer  "offer_region_id"
     t.integer  "offer_status_id"
     t.integer  "offer_type_id"
+    t.integer  "offer_source_type_id"
     t.text     "description"
     t.string   "address"
     t.string   "address_en"
@@ -108,19 +116,20 @@ ActiveRecord::Schema.define(:version => 20130719152553) do
     t.string   "contact_phone"
     t.string   "contact_mobile"
     t.string   "contact_email"
-    t.decimal  "checkin_after",    :precision => 10, :scale => 0
-    t.decimal  "checkout_before",  :precision => 10, :scale => 0
+    t.decimal  "checkin_after",        :precision => 10, :scale => 0
+    t.decimal  "checkout_before",      :precision => 10, :scale => 0
     t.text     "nearby"
     t.text     "amenities"
     t.text     "rules"
     t.text     "remark"
-    t.datetime "created_at",                                      :null => false
-    t.datetime "updated_at",                                      :null => false
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
   end
 
   add_index "offers", ["code"], :name => "index_offers_on_code", :unique => true
   add_index "offers", ["offer_owner_id"], :name => "index_offers_on_offer_owner_id"
   add_index "offers", ["offer_region_id"], :name => "index_offers_on_offer_region_id"
+  add_index "offers", ["offer_source_type_id"], :name => "index_offers_on_offer_source_type_id"
   add_index "offers", ["offer_status_id"], :name => "index_offers_on_offer_status_id"
   add_index "offers", ["offer_type_id"], :name => "index_offers_on_offer_type_id"
 

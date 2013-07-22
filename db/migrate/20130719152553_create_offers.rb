@@ -8,6 +8,7 @@ class CreateOffers < ActiveRecord::Migration
       t.references :offer_region
       t.references :offer_status
       t.references :offer_type
+      t.references :offer_source_type
       t.text :description
       t.string :address      
       t.string :address_en
@@ -39,5 +40,6 @@ class CreateOffers < ActiveRecord::Migration
     add_index :offers, :offer_region_id
     add_index :offers, :offer_status_id
     add_index :offers, :offer_type_id
+    add_index :offers, :offer_source_type_id
   end
 end

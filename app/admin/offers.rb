@@ -27,6 +27,7 @@ ActiveAdmin.register Offer do
   filter :offer_region
   filter :offer_status
   filter :offer_type 
+  filter :offer_source_type
 
 
 end
