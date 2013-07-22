@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88749486-43d6-4f28-8e2e-bf37dde5e459" name="Default" comment="" />
+    <list default="true" id="88749486-43d6-4f28-8e2e-bf37dde5e459" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130722055240_create_offer_sources.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/offer_source.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/offer_source_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/admin/offer_sources.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/offer_sources.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130719152553_create_offers.rb" afterPath="$PROJECT_DIR$/db/migrate/20130719152553_create_offers.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/macropolo.iml" afterPath="$PROJECT_DIR$/.idea/macropolo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer.rb" afterPath="$PROJECT_DIR$/app/models/offer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer_owner.rb" afterPath="$PROJECT_DIR$/app/models/offer_owner.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer_region.rb" afterPath="$PROJECT_DIR$/app/models/offer_region.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer_source_currency_type.rb" afterPath="$PROJECT_DIR$/app/models/offer_source_currency_type.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer_status.rb" afterPath="$PROJECT_DIR$/app/models/offer_status.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer_type.rb" afterPath="$PROJECT_DIR$/app/models/offer_type.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="macropolo.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374247519502" ignored="false" />
+    <file path="/Dummy.txt" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374473978423" ignored="false" />
     <file path="/.gitignore" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1373992478905" ignored="false" />
     <file path="$USER_HOME$/Rmworkspace/testrails2/Gemfile" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374026700773" ignored="false" />
     <file path="$USER_HOME$/Rmworkspace/testrails2/db/seeds.rb" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374025923867" ignored="false" />
@@ -60,83 +76,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="20130719152553_create_offers.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130719152553_create_offers.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="27" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offers.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/factories/offers.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="11" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/schema.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offer.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/offer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="85" selection-start="645" selection-end="645" vertical-scroll-proportion="0.12223516">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offers.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/offers.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offer_owner.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/offer_owner.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="40" selection-end="56" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offer_type.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/offer_type.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offer_status.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/offer_status.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offer_region.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/offer_region.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
-              <folding />
+      <file leaf-file-name="RailsDependency/#macropolo" pinned="false" current="true" current-in-tab="true">
+        <entry file="uml://RailsDependency/#macropolo">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>RailsDependency</ID>
+              <OriginalElement>#macropolo</OriginalElement>
+              <nodes>
+                <node x="1012.0" y="1187.0">CurrencyToRmbRate</node>
+                <node x="821.0" y="726.0">User</node>
+                <node x="0.0" y="726.0">OfferOwner</node>
+                <node x="0.0" y="1187.0">OfferRegion</node>
+                <node x="0.0" y="1408.0">Ability</node>
+                <node x="553.0" y="809.5">Role</node>
+                <node x="1234.0" y="1187.0">OfferSourceType</node>
+                <node x="518.0" y="1187.0">OfferType</node>
+                <node x="0.0" y="0.0">Offer</node>
+                <node x="837.0" y="252.0">OfferSource</node>
+                <node x="747.0" y="1187.0">OfferSourceCurrencyType</node>
+                <node x="289.0" y="1187.0">OfferStatus</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="Role" target="User">
+                  <point x="94.0" y="-0.0" />
+                  <point x="-224.5" y="-0.0" />
+                </edge>
+                <edge source="Offer" target="OfferSource">
+                  <point x="378.5" y="-0.0" />
+                  <point x="-116.5" y="-0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.6157534246575342" x="699.0044493882092" y="660.0" />
+              <SelectedNodes>
+                <node>Offer</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Association fields</Category>
+                <Category>Migration fields</Category>
+              </Categories>
             </state>
           </provider>
         </entry>
@@ -190,10 +168,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2055" />
-    <option name="y" value="74" />
-    <option name="width" value="1918" />
-    <option name="height" value="1027" />
+    <option name="x" value="1920" />
+    <option name="y" value="24" />
+    <option name="width" value="1920" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -221,7 +199,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -389,19 +366,20 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Database.TableEditor.Splitter" value="0.7723577" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/rubymine" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Rails.Development: macropolo">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -711,15 +689,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2055" y="74" width="1918" height="1027" extended-state="0" />
-    <editor active="false" />
+    <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.025889968" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12098501" sideWeight="0.97411" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.120855615" sideWeight="0.97411" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24250536" sideWeight="0.97411" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.05989305" sideWeight="0.97411" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.412082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -728,6 +705,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.025889968" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -804,23 +782,14 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="502" selection-end="502" vertical-scroll-proportion="0.14578834" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130717160245_create_offer_types.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="5" selection-start="201" selection-end="247" vertical-scroll-proportion="0.14578834">
-          <folding />
-        </state>
+        <state line="9" column="5" selection-start="201" selection-end="247" vertical-scroll-proportion="0.14578834" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130718021213_create_offer_regions.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="28" selection-start="382" selection-end="382" vertical-scroll-proportion="0.27537796">
-          <folding />
-        </state>
+        <state line="17" column="28" selection-start="382" selection-end="382" vertical-scroll-proportion="0.27537796" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/offer_regions.rb">
@@ -845,21 +814,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/offers.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0">
+        <state line="33" column="0" selection-start="622" selection-end="622" vertical-scroll-proportion="0.5345572">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130719152553_create_offers.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="27" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+        <state line="7" column="27" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/factories/offers.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="11" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+        <state line="8" column="11" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -873,36 +842,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/offer_owner.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="40" selection-end="56" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="40" selection-end="56" vertical-scroll-proportion="0.032858707">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/offer_region.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="0.032397408">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/offer_status.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/offer_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="0.032397408">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/offer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="85" selection-start="645" selection-end="645" vertical-scroll-proportion="0.12223516">
+        <state line="14" column="85" selection-start="732" selection-end="732" vertical-scroll-proportion="0.23001096">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/offer_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://RailsDependency/#macropolo">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>RailsDependency</ID>
+          <OriginalElement>#macropolo</OriginalElement>
+          <nodes>
+            <node x="1012.0" y="1187.0">CurrencyToRmbRate</node>
+            <node x="821.0" y="726.0">User</node>
+            <node x="0.0" y="726.0">OfferOwner</node>
+            <node x="0.0" y="1187.0">OfferRegion</node>
+            <node x="0.0" y="1408.0">Ability</node>
+            <node x="553.0" y="809.5">Role</node>
+            <node x="1234.0" y="1187.0">OfferSourceType</node>
+            <node x="518.0" y="1187.0">OfferType</node>
+            <node x="0.0" y="0.0">Offer</node>
+            <node x="837.0" y="252.0">OfferSource</node>
+            <node x="747.0" y="1187.0">OfferSourceCurrencyType</node>
+            <node x="289.0" y="1187.0">OfferStatus</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Role" target="User">
+              <point x="94.0" y="-0.0" />
+              <point x="-224.5" y="-0.0" />
+            </edge>
+            <edge source="Offer" target="OfferSource">
+              <point x="378.5" y="-0.0" />
+              <point x="-116.5" y="-0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6157534246575342" x="699.0044493882092" y="660.0" />
+          <SelectedNodes>
+            <node>Offer</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Association fields</Category>
+            <Category>Migration fields</Category>
+          </Categories>
         </state>
       </provider>
     </entry>

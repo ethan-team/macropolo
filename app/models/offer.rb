@@ -1,4 +1,5 @@
 class Offer < ActiveRecord::Base
+  has_one :offer_source
   belongs_to :offer_owner
   belongs_to :offer_region
   belongs_to :offer_status
@@ -11,6 +12,6 @@ class Offer < ActiveRecord::Base
   attr_accessible :contact_email, :contact_info, :contact_mobile, :contact_phone 
   attr_accessible :latitude, :longitude
 
-  attr_accessible :offer_owner_id, :offer_region_id, :offer_status_id, :offer_type_id, :offer_source_type_id
+  attr_accessible :offer_owner_id, :offer_region_id, :offer_status_id, :offer_type_id, :offer_source_type_id, :offer_soruce_id
 
 end

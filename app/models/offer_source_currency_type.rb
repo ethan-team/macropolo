@@ -1,4 +1,4 @@
 class OfferSourceCurrencyType < ActiveRecord::Base
-  belongs_to :offer_source_currency_type
+  has_many :offer_source_source
   attr_accessible :code, :name
 end

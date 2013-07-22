@@ -1,5 +1,5 @@
 class OfferStatus < ActiveRecord::Base
-  has_many :offer
+  #has_many :offer
 
   attr_accessible :code, :name, :name_en
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130722043330) do
+ActiveRecord::Schema.define(:version => 20130722055240) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -88,6 +88,23 @@ ActiveRecord::Schema.define(:version => 20130722043330) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "offer_sources", :force => true do |t|
+    t.integer  "offer_code"
+    t.integer  "source_id"
+    t.string   "source_uri"
+    t.text     "original_introduction"
+    t.integer  "offer_source_type_id"
+    t.integer  "offer_source_currency_type_id"
+    t.integer  "offer_id"
+    t.text     "remark"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  add_index "offer_sources", ["offer_id"], :name => "index_offer_sources_on_offer_id"
+  add_index "offer_sources", ["offer_source_currency_type_id"], :name => "index_offer_sources_on_offer_source_currency_type_id"
+  add_index "offer_sources", ["offer_source_type_id"], :name => "index_offer_sources_on_offer_source_type_id"
+
   create_table "offer_statuses", :force => true do |t|
     t.integer  "code"
     t.string   "name"
@@ -117,6 +134,7 @@ ActiveRecord::Schema.define(:version => 20130722043330) do
     t.integer  "offer_status_id"
     t.integer  "offer_type_id"
     t.integer  "offer_source_type_id"
+    t.integer  "offer_source_id"
     t.text     "description"
     t.string   "address"
     t.string   "address_en"
