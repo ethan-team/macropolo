@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88749486-43d6-4f28-8e2e-bf37dde5e459" name="Default" comment="" />
+    <list default="true" id="88749486-43d6-4f28-8e2e-bf37dde5e459" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/booking_statuses.rb" afterPath="$PROJECT_DIR$/app/admin/booking_statuses.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds/bookings.seeds.rb" afterPath="$PROJECT_DIR$/db/seeds/bookings.seeds.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+    </list>
     <ignored path="macropolo.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="88749486-43d6-4f28-8e2e-bf37dde5e459" time="1374473978423" ignored="false" />
@@ -67,19 +73,21 @@
               <ID>RailsDependency</ID>
               <OriginalElement>#macropolo</OriginalElement>
               <nodes>
+                <node x="434.0" y="1223.0">BookingHistory</node>
                 <node x="821.0" y="726.0">User</node>
-                <node x="0.0" y="1408.0">OfferSourceType</node>
-                <node x="747.0" y="1187.0">BookingStatus</node>
-                <node x="0.0" y="0.0">Offer</node>
+                <node x="1128.0" y="1187.0">BookingStatus</node>
+                <node x="487.0" y="1385.0">OfferSourceType</node>
+                <node x="0.0" y="1187.0">Booking</node>
                 <node x="837.0" y="252.0">OfferSource</node>
-                <node x="976.0" y="1187.0">OfferSourceCurrencyType</node>
-                <node x="1241.0" y="1187.0">CurrencyToRmbRate</node>
+                <node x="0.0" y="0.0">Offer</node>
+                <node x="0.0" y="1385.0">OfferSourceCurrencyType</node>
+                <node x="265.0" y="1385.0">CurrencyToRmbRate</node>
                 <node x="0.0" y="726.0">OfferOwner</node>
-                <node x="0.0" y="1187.0">OfferRegion</node>
+                <node x="1315.0" y="726.0">OfferRegion</node>
+                <node x="696.0" y="1385.0">Ability</node>
                 <node x="553.0" y="809.5">Role</node>
-                <node x="209.0" y="1408.0">Ability</node>
-                <node x="518.0" y="1187.0">OfferType</node>
-                <node x="289.0" y="1187.0">OfferStatus</node>
+                <node x="899.0" y="1187.0">OfferType</node>
+                <node x="670.0" y="1187.0">OfferStatus</node>
               </nodes>
               <notes />
               <edges>
@@ -87,14 +95,18 @@
                   <point x="94.0" y="-0.0" />
                   <point x="-224.5" y="-0.0" />
                 </edge>
+                <edge source="Booking" target="BookingHistory">
+                  <point x="177.0" y="-0.0" />
+                  <point x="-95.5" y="-0.0" />
+                </edge>
                 <edge source="Offer" target="OfferSource">
                   <point x="378.5" y="-0.0" />
                   <point x="-116.5" y="-0.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.6157534246575342" x="689.2602892102336" y="612.091212458287" />
+              <settings layout="Hierarchic Group" zoom="0.5838383838383838" x="779.7301038062285" y="1149.3771626297578" />
               <SelectedNodes>
-                <node>Offer</node>
+                <node>OfferStatus</node>
               </SelectedNodes>
               <Categories>
                 <Category>Association fields</Category>
@@ -153,8 +165,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1793" />
-    <option name="y" value="526" />
+    <option name="x" value="1914" />
+    <option name="y" value="61" />
     <option name="width" value="1908" />
     <option name="height" value="997" />
   </component>
@@ -674,8 +686,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1793" y="526" width="1908" height="997" extended-state="0" />
-    <editor active="true" />
+    <frame x="1914" y="61" width="1908" height="997" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -866,19 +878,21 @@
           <ID>RailsDependency</ID>
           <OriginalElement>#macropolo</OriginalElement>
           <nodes>
+            <node x="434.0" y="1223.0">BookingHistory</node>
             <node x="821.0" y="726.0">User</node>
-            <node x="747.0" y="1187.0">BookingStatus</node>
-            <node x="0.0" y="1408.0">OfferSourceType</node>
+            <node x="1128.0" y="1187.0">BookingStatus</node>
+            <node x="487.0" y="1385.0">OfferSourceType</node>
+            <node x="0.0" y="1187.0">Booking</node>
             <node x="837.0" y="252.0">OfferSource</node>
             <node x="0.0" y="0.0">Offer</node>
-            <node x="976.0" y="1187.0">OfferSourceCurrencyType</node>
-            <node x="1241.0" y="1187.0">CurrencyToRmbRate</node>
+            <node x="0.0" y="1385.0">OfferSourceCurrencyType</node>
+            <node x="265.0" y="1385.0">CurrencyToRmbRate</node>
             <node x="0.0" y="726.0">OfferOwner</node>
-            <node x="0.0" y="1187.0">OfferRegion</node>
-            <node x="209.0" y="1408.0">Ability</node>
+            <node x="1315.0" y="726.0">OfferRegion</node>
+            <node x="696.0" y="1385.0">Ability</node>
             <node x="553.0" y="809.5">Role</node>
-            <node x="518.0" y="1187.0">OfferType</node>
-            <node x="289.0" y="1187.0">OfferStatus</node>
+            <node x="899.0" y="1187.0">OfferType</node>
+            <node x="670.0" y="1187.0">OfferStatus</node>
           </nodes>
           <notes />
           <edges>
@@ -886,14 +900,18 @@
               <point x="94.0" y="-0.0" />
               <point x="-224.5" y="-0.0" />
             </edge>
+            <edge source="Booking" target="BookingHistory">
+              <point x="177.0" y="-0.0" />
+              <point x="-95.5" y="-0.0" />
+            </edge>
             <edge source="Offer" target="OfferSource">
               <point x="378.5" y="-0.0" />
               <point x="-116.5" y="-0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.6157534246575342" x="689.2602892102336" y="612.091212458287" />
+          <settings layout="Hierarchic Group" zoom="0.5838383838383838" x="779.7301038062285" y="1149.3771626297578" />
           <SelectedNodes>
-            <node>Offer</node>
+            <node>OfferStatus</node>
           </SelectedNodes>
           <Categories>
             <Category>Association fields</Category>

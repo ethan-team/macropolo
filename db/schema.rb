@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130722073155) do
+ActiveRecord::Schema.define(:version => 20130722100750) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -28,6 +28,17 @@ ActiveRecord::Schema.define(:version => 20130722073155) do
   add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
 
+  create_table "booking_histories", :force => true do |t|
+    t.integer  "booking_id"
+    t.integer  "booking_status_id"
+    t.string   "remark"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "booking_histories", ["booking_id"], :name => "index_booking_histories_on_booking_id"
+  add_index "booking_histories", ["booking_status_id"], :name => "index_booking_histories_on_booking_status_id"
+
   create_table "booking_statuses", :force => true do |t|
     t.integer  "code"
     t.string   "name"
@@ -35,6 +46,22 @@ ActiveRecord::Schema.define(:version => 20130722073155) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "bookings", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "offer_id"
+    t.integer  "booking_status_id"
+    t.string   "guest_name"
+    t.string   "guest_contact_info"
+    t.string   "guest_extra_info"
+    t.float    "total_payment_in_rmb"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+  end
+
+  add_index "bookings", ["booking_status_id"], :name => "index_bookings_on_booking_status_id"
+  add_index "bookings", ["offer_id"], :name => "index_bookings_on_offer_id"
+  add_index "bookings", ["user_id"], :name => "index_bookings_on_user_id"
 
   create_table "currency_to_rmb_rates", :force => true do |t|
     t.integer  "offer_source_currency_type_id"
