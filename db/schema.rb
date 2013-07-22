@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130722040133) do
+ActiveRecord::Schema.define(:version => 20130722043330) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -27,6 +27,17 @@ ActiveRecord::Schema.define(:version => 20130722040133) do
   add_index "active_admin_comments", ["author_type", "author_id"], :name => "index_active_admin_comments_on_author_type_and_author_id"
   add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
+
+  create_table "currency_to_rmb_rates", :force => true do |t|
+    t.integer  "offer_source_currency_type_id"
+    t.float    "rate"
+    t.boolean  "reviewed"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  add_index "currency_to_rmb_rates", ["created_at"], :name => "index_currency_to_rmb_rates_on_created_at"
+  add_index "currency_to_rmb_rates", ["offer_source_currency_type_id"], :name => "index_currency_to_rmb_rates_on_offer_source_currency_type_id"
 
   create_table "offer_owners", :force => true do |t|
     t.string   "name"
@@ -62,6 +73,13 @@ ActiveRecord::Schema.define(:version => 20130722040133) do
 
   add_index "offer_regions", ["code"], :name => "index_offer_regions_on_code", :unique => true
   add_index "offer_regions", ["parent_id"], :name => "index_offer_regions_on_parent_id"
+
+  create_table "offer_source_currency_types", :force => true do |t|
+    t.integer  "code"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "offer_source_types", :force => true do |t|
     t.integer  "code"

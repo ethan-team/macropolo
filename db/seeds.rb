@@ -190,6 +190,36 @@ seed_offer_source_type  code:4,    name:"unknown"
 puts "OfferSourceType seeded"
 
 
+# OfferSourceCurrencyType
+puts "OfferSourceCurrencyType"
+
+def seed_offer_source_currency_type arg
+  arg[:code] = 0 unless arg[:code]
+  osct = OfferSourceCurrencyType.find_by_code arg[:code]
+  osct = OfferSourceCurrencyType.create! arg unless osct
+  puts "  OfferRegion: #{osct.code} #{osct.name} "
+  osct
+end
+
+osctRMB = seed_offer_source_currency_type  code:0,    name:"RMB"
+osctHKD = seed_offer_source_currency_type  code:1,    name:"HKD"
+osctUSD = seed_offer_source_currency_type  code:2,    name:"USD"
+osctTWY = seed_offer_source_currency_type  code:3,    name:"TWY"
+osctTHB = seed_offer_source_currency_type  code:4,    name:"THB"
+
+puts "OfferSourceCurrencyType seeded"
+
+#Currency_to_rmb_rate
+puts "Currency_to_rmb_rate"
+CurrencyToRmbRate.create! offer_source_currency_type_id:osctRMB.id, rate:1,    reviewed: 1
+CurrencyToRmbRate.create! offer_source_currency_type_id:osctHKD.id, rate:0.82, reviewed: 1
+CurrencyToRmbRate.create! offer_source_currency_type_id:osctUSD.id, rate:6.21, reviewed: 1
+CurrencyToRmbRate.create! offer_source_currency_type_id:osctTWY.id, rate:2.5,  reviewed: 1
+CurrencyToRmbRate.create! offer_source_currency_type_id:osctTHB.id, rate:0.13,   reviewed: 1
+
+puts "Currency_to_rmb_rate seeded"
+
+
 #Offer
 puts "Offer"
 
