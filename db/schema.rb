@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130723024200) do
+ActiveRecord::Schema.define(:version => 20130723042310) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -119,6 +119,20 @@ ActiveRecord::Schema.define(:version => 20130723024200) do
 
   add_index "offer_regions", ["code"], :name => "index_offer_regions_on_code", :unique => true
   add_index "offer_regions", ["parent_id"], :name => "index_offer_regions_on_parent_id"
+
+  create_table "offer_reviews", :force => true do |t|
+    t.integer  "offer_id"
+    t.integer  "user_id"
+    t.integer  "booking_id"
+    t.text     "body"
+    t.integer  "rating"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "offer_reviews", ["booking_id"], :name => "index_offer_reviews_on_booking_id"
+  add_index "offer_reviews", ["offer_id"], :name => "index_offer_reviews_on_offer_id"
+  add_index "offer_reviews", ["user_id"], :name => "index_offer_reviews_on_user_id"
 
   create_table "offer_source_currency_types", :force => true do |t|
     t.integer  "code"
