@@ -38,8 +38,6 @@ u4.add_role :operation_host
 u5 = seed_user name:"operation_guest", email:"operation_guest@zhubaijia.com"
 u5.add_role :operation_guest
 
-u6 = seed_user name:"user", email:"user@gmail.com"
-u6.add_role :user
 
 u7 = seed_user name:"ethan", email:"ethan.jiang@zhubaijia.com"
 u7.add_role :site_admin
@@ -53,5 +51,19 @@ u9.add_role :operation_host
 
 u10 = seed_user name:"shanon", email:"shanon.li@zhubaijia.com"
 u10.add_role :operation_guest
+
+
+u20 = seed_user name:"guest info.zhubaijia", email:"info.zhubaijia@gmail.com"
+u20.add_role :user
+
+u21 = seed_user name:"guest ethan one", email:"ethan1.jiang@gmail.com"
+u21.add_role :user 
+
+u22 = seed_user name:"guest ethan two", email:"ethan2.jiang@gmail.com"
+u22.add_role :user 
+
+u23 = seed_user name:"guest ethan three", email:"ethan3.jiang@gmail.com"
+u23.add_role :user 
+
 
 puts "User seeded"
