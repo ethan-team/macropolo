@@ -11,7 +11,9 @@ class User < ActiveRecord::Base
   attr_accessible :role_ids          #TODO Yizhen potential risk to exposed role without restriction,  open it for now for activeadmin
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
-  #has_many :roles
+  has_and_belongs_to_many :roles, :join_table => :users_roles
+  has_many :vouchers
+  has_many :bookings
 
   def is_admin?
     # self.email && ENV['ADMIN_EMAILS'].to_s.include?(self.email)

@@ -1,5 +1,5 @@
 class OfferRegion < ActiveRecord::Base
-  #has_many :offer
+  has_many :offers
   belongs_to :parent, :class_name => "OfferRegion"
 
   attr_accessible :code, :latitude, :longitude, :name, :name_en, :parent_id
