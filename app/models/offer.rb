@@ -1,5 +1,7 @@
 class Offer < ActiveRecord::Base
   has_one :offer_source
+  has_many :offer_reviews
+  has_many :offer_images
   belongs_to :offer_owner
   belongs_to :offer_region
   belongs_to :offer_status

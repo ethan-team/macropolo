@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130723042310) do
+ActiveRecord::Schema.define(:version => 20130723050335) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -84,6 +84,21 @@ ActiveRecord::Schema.define(:version => 20130723042310) do
 
   add_index "currency_to_rmb_rates", ["created_at"], :name => "index_currency_to_rmb_rates_on_created_at"
   add_index "currency_to_rmb_rates", ["offer_source_currency_type_id"], :name => "index_currency_to_rmb_rates_on_offer_source_currency_type_id"
+
+  create_table "offer_images", :force => true do |t|
+    t.integer  "offer_id"
+    t.string   "uri"
+    t.string   "preview_uri"
+    t.integer  "width"
+    t.integer  "height"
+    t.boolean  "is_primary"
+    t.string   "label"
+    t.integer  "seq"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "offer_images", ["offer_id"], :name => "index_offer_images_on_offer_id"
 
   create_table "offer_owners", :force => true do |t|
     t.string   "name"

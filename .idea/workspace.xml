@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="88749486-43d6-4f28-8e2e-bf37dde5e459" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/booking.rb" afterPath="$PROJECT_DIR$/app/models/booking.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pending rail models.txt" afterPath="$PROJECT_DIR$/pending rail models.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer.rb" afterPath="$PROJECT_DIR$/app/models/offer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="macropolo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,43 +72,54 @@
               <ID>RailsDependency</ID>
               <OriginalElement>#macropolo</OriginalElement>
               <nodes>
-                <node x="494.0" y="1308.0">BookingHistory</node>
-                <node x="821.0" y="726.0">User</node>
-                <node x="0.0" y="1434.0">BookingStatus</node>
-                <node x="716.0" y="1434.0">OfferSourceType</node>
-                <node x="0.0" y="1199.5">Booking</node>
-                <node x="837.0" y="252.0">OfferSource</node>
+                <node x="494.0" y="1235.0">BookingHistory</node>
+                <node x="821.0" y="774.0">User</node>
+                <node x="1477.0" y="1235.0">BookingStatus</node>
+                <node x="487.0" y="1482.0">OfferSourceType</node>
+                <node x="0.0" y="1247.5">Booking</node>
+                <node x="914.0" y="517.0">OfferReview</node>
+                <node x="884.0" y="35.0">OfferSource</node>
                 <node x="0.0" y="0.0">Offer</node>
-                <node x="229.0" y="1434.0">OfferSourceCurrencyType</node>
-                <node x="494.0" y="1434.0">CurrencyToRmbRate</node>
-                <node x="0.0" y="726.0">OfferOwner</node>
-                <node x="730.0" y="1187.0">OfferRegion</node>
-                <node x="494.0" y="1187.0">BookingComment</node>
-                <node x="925.0" y="1434.0">Ability</node>
-                <node x="553.0" y="809.5">Role</node>
-                <node x="1248.0" y="1187.0">OfferType</node>
-                <node x="1019.0" y="1187.0">OfferStatus</node>
+                <node x="0.0" y="1482.0">OfferSourceCurrencyType</node>
+                <node x="265.0" y="1482.0">CurrencyToRmbRate</node>
+                <node x="0.0" y="774.0">OfferOwner</node>
+                <node x="730.0" y="1235.0">OfferRegion</node>
+                <node x="494.0" y="1356.0">BookingComment</node>
+                <node x="864.0" y="252.0">OfferImage</node>
+                <node x="696.0" y="1482.0">Ability</node>
+                <node x="553.0" y="857.5">Role</node>
+                <node x="1248.0" y="1235.0">OfferType</node>
+                <node x="1019.0" y="1235.0">OfferStatus</node>
               </nodes>
               <notes />
               <edges>
+                <edge source="Offer" target="OfferReview">
+                  <point x="392.0" y="243.0" />
+                  <point x="864.0" y="569.5" />
+                  <point x="-86.5" y="-0.0" />
+                </edge>
                 <edge source="Role" target="User">
                   <point x="94.0" y="-0.0" />
                   <point x="-224.5" y="-0.0" />
                 </edge>
                 <edge source="Booking" target="BookingComment">
-                  <point x="207.0" y="-44.25" />
-                  <point x="-95.5" y="-0.0" />
-                </edge>
-                <edge source="Booking" target="BookingHistory">
                   <point x="207.0" y="44.25" />
                   <point x="-95.5" y="-0.0" />
                 </edge>
+                <edge source="Booking" target="BookingHistory">
+                  <point x="207.0" y="-44.25" />
+                  <point x="-95.5" y="-0.0" />
+                </edge>
+                <edge source="Offer" target="OfferImage">
+                  <point x="392.0" y="-0.0" />
+                  <point x="-136.5" y="-0.0" />
+                </edge>
                 <edge source="Offer" target="OfferSource">
-                  <point x="378.5" y="-0.0" />
+                  <point x="392.0" y="-243.0" />
                   <point x="-116.5" y="-0.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.5770218228498074" x="716.5061179087877" y="1029.0" />
+              <settings layout="Hierarchic Group" zoom="0.56826801517067" x="527.4015572858732" y="661.0" />
               <SelectedNodes />
               <Categories>
                 <Category>Association fields</Category>
@@ -213,152 +224,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="factories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macropolo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -689,13 +554,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14491978" sideWeight="0.97411" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.035828877" sideWeight="0.97411" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22032085" sideWeight="0.97411" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.412082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -874,43 +739,54 @@
           <ID>RailsDependency</ID>
           <OriginalElement>#macropolo</OriginalElement>
           <nodes>
-            <node x="494.0" y="1308.0">BookingHistory</node>
-            <node x="821.0" y="726.0">User</node>
-            <node x="0.0" y="1434.0">BookingStatus</node>
-            <node x="716.0" y="1434.0">OfferSourceType</node>
-            <node x="0.0" y="1199.5">Booking</node>
-            <node x="837.0" y="252.0">OfferSource</node>
+            <node x="494.0" y="1235.0">BookingHistory</node>
+            <node x="821.0" y="774.0">User</node>
+            <node x="1477.0" y="1235.0">BookingStatus</node>
+            <node x="487.0" y="1482.0">OfferSourceType</node>
+            <node x="0.0" y="1247.5">Booking</node>
+            <node x="914.0" y="517.0">OfferReview</node>
+            <node x="884.0" y="35.0">OfferSource</node>
             <node x="0.0" y="0.0">Offer</node>
-            <node x="229.0" y="1434.0">OfferSourceCurrencyType</node>
-            <node x="494.0" y="1434.0">CurrencyToRmbRate</node>
-            <node x="0.0" y="726.0">OfferOwner</node>
-            <node x="730.0" y="1187.0">OfferRegion</node>
-            <node x="494.0" y="1187.0">BookingComment</node>
-            <node x="925.0" y="1434.0">Ability</node>
-            <node x="553.0" y="809.5">Role</node>
-            <node x="1248.0" y="1187.0">OfferType</node>
-            <node x="1019.0" y="1187.0">OfferStatus</node>
+            <node x="0.0" y="1482.0">OfferSourceCurrencyType</node>
+            <node x="265.0" y="1482.0">CurrencyToRmbRate</node>
+            <node x="0.0" y="774.0">OfferOwner</node>
+            <node x="730.0" y="1235.0">OfferRegion</node>
+            <node x="494.0" y="1356.0">BookingComment</node>
+            <node x="864.0" y="252.0">OfferImage</node>
+            <node x="696.0" y="1482.0">Ability</node>
+            <node x="553.0" y="857.5">Role</node>
+            <node x="1248.0" y="1235.0">OfferType</node>
+            <node x="1019.0" y="1235.0">OfferStatus</node>
           </nodes>
           <notes />
           <edges>
+            <edge source="Offer" target="OfferReview">
+              <point x="392.0" y="243.0" />
+              <point x="864.0" y="569.5" />
+              <point x="-86.5" y="-0.0" />
+            </edge>
             <edge source="Role" target="User">
               <point x="94.0" y="-0.0" />
               <point x="-224.5" y="-0.0" />
             </edge>
             <edge source="Booking" target="BookingComment">
-              <point x="207.0" y="-44.25" />
-              <point x="-95.5" y="-0.0" />
-            </edge>
-            <edge source="Booking" target="BookingHistory">
               <point x="207.0" y="44.25" />
               <point x="-95.5" y="-0.0" />
             </edge>
+            <edge source="Booking" target="BookingHistory">
+              <point x="207.0" y="-44.25" />
+              <point x="-95.5" y="-0.0" />
+            </edge>
+            <edge source="Offer" target="OfferImage">
+              <point x="392.0" y="-0.0" />
+              <point x="-136.5" y="-0.0" />
+            </edge>
             <edge source="Offer" target="OfferSource">
-              <point x="378.5" y="-0.0" />
+              <point x="392.0" y="-243.0" />
               <point x="-116.5" y="-0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.5770218228498074" x="716.5061179087877" y="1029.0" />
+          <settings layout="Hierarchic Group" zoom="0.56826801517067" x="527.4015572858732" y="661.0" />
           <SelectedNodes />
           <Categories>
             <Category>Association fields</Category>
