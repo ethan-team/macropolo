@@ -1,6 +1,5 @@
 ActiveAdmin.register OfferReview do
- menu :parent => "Offer"  
-
+ 	menu :parent => "Offer"  
     actions :all, :except => [:destroy]
 
   index :download_links => false do

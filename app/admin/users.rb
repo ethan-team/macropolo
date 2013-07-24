@@ -1,4 +1,4 @@
-def roles_with_display_names u
+def display_role_names_for_user u
   x = "< "
   u.roles.each do |r|
      x+= r.display_name + " "
@@ -25,7 +25,7 @@ ActiveAdmin.register User do
     column "Registered email", :email
     column :name
     column "Roles" do |user|
-      roles_with_display_names user
+      display_role_names_for_user user
     end
     
     default_actions
@@ -46,7 +46,7 @@ ActiveAdmin.register User do
   filter :name, :as => :string
   filter :email, :as => :string
   #TODO,  provide checkbox to filter different roles
-  #filter :role_ids 
+  #filter :roles, :as => :check_boxes, :collection => proc {Role.all} 
 
   form do |f|
     f.inputs "roles" do
