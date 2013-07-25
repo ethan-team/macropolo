@@ -1,7 +1,7 @@
 #encoding: utf-8
 
 # OfferType
-puts "BookingStatus`"
+puts "BookingStatus"
 
 def seed_booking_status arg
   arg[:code] = 0 unless arg[:code]

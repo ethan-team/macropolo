@@ -152,58 +152,72 @@ CurrencyToRmbRate.create! offer_source_currency_type_id:osctTHB.id, rate:0.13,  
 puts "Currency_to_rmb_rate seeded"
 
 
+# OfferType
+puts "AvailibilityType"
+
+def seed_availibility_type arg
+  arg[:code] = 0 unless arg[:code]
+  abt = AvailibilityType.find_by_code arg[:code]
+  abt = AvailibilityType.create! arg unless abt
+  puts "  AvailibiltyType: #{abt.code} #{abt.name} #{abt.name_en}"
+  abt
+end
+
+seed_availibility_type code: 0,   name: "availible",          name_en: "availible"
+seed_availibility_type code: 1,   name: "availible : manual", name_en: "availible: manual"
+seed_availibility_type code: 10,  name: "booked",             name_en: "booked" 
+seed_availibility_type code: 11,  name: "booked : manual",    name_en: "booked : manual" 
+seed_availibility_type code: 20,  name: "pending",            name_en: "pending"
+seed_availibility_type code: 30,  name: "on request",         name_en: "on request"
+seed_availibility_type code: 40,  name: "off stock",          name_en: "off stock"
+
+puts "AvailibilityType seeded"
+
 #Offer
 puts "Offer"
 
 def seed_offer arg
   arg[:name] = "Unkwown" unless arg[:name]
-  offer = Offer.find_by_name arg[:name]
+  arg[:address] = "somewhere at street No." + rand(1000).to_s 
+  arg[:code] = rand(10000).to_s unless arg[:code]
+  arg[:size_in_m2] = rand(300) 
+  offer = Offer.find_by_code arg[:code]
   offer = Offer.create! arg unless offer
-  puts "  OfferOwner: #{offer.name} #{offer.name_en}"
+  puts "  OfferOwner: #{offer.name}"
   offer
 end
 
-seed_offer name:"offer1: hong kong apartment 1",    code: 100,    address:"101 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer2: hong kong apartment 2",    code: 101,    address:"102 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer3: hong kong apartment 3",    code: 102,    address:"103 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer4: hong kong apartment 4",    code: 103,    address:"104 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer5: hong kong apartment 5",    code: 105,    address:"105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offerA: hong kong apartment A",    code: 107,    address:"A 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offerB: hong kong apartment B",    code: 108,    address:"B 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offerC: hong kong apartment C",    code: 109,    address:"C 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offerD: hong kong apartment D",    code: 111,    address:"D 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offerE: hong kong apartment D",    code: 1030,   address:"E 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer11: hong kong apartment 11",  code: 1200,   address:"101 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer12: hong kong apartment 12",  code: 1367,   address:"102 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer13: hong kong apartment 13",  code: 1040,   address:"103 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer14: hong kong apartment 14",  code: 12031,  address:"104 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer15: hong kong apartment 15",  code: 1300,   address:"105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer1A: hong kong apartment 1A",  code: 1049,   address:"A 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer1B: hong kong apartment 1B",  code: 1029,   address:"B 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer1C: hong kong apartment 1C",  code: 12030,  address:"C 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer1D: hong kong apartment 1D",  code: 1027,   address:"D 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer1E: hong kong apartment 1D",  code: 1020,   address:"E 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer111: hong kong apartment 1",  code: 1021,   address:"101 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer112: hong kong apartment 2",  code: 1201,   address:"102 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer113: hong kong apartment 3",  code: 12100,  address:"103 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer114: hong kong apartment 4",  code: 1310,   address:"104 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer115: hong kong apartment 5",  code: 1033,   address:"105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer11A: hong kong apartment A",  code: 1044,   address:"A 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer11B: hong kong apartment B",  code: 1055,   address:"B 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer11C: hong kong apartment C",  code: 1022,   address:"C 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer11D: hong kong apartment D",  code: 1066,   address:"D 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer11E: hong kong apartment D",  code: 1506,   address:"E 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer111: hong kong apartment 11", code: 1240,   address:"101 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer112: hong kong apartment 12", code: 1120,   address:"102 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer113: hong kong apartment 13", code: 1068,   address:"103 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer114: hong kong apartment 14", code: 190,    address:"104 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer115: hong kong apartment 15", code: 1067,   address:"105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer11A: hong kong apartment 1A", code: 1089,   address:"A 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer11B: hong kong apartment 1B", code: 1150,   address:"B 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer11C: hong kong apartment 1C", code: 1077,   address:"C 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer11D: hong kong apartment 1D", code: 10877,  address:"D 105 main street, central, hongkong",  size_in_m2:100
-seed_offer name:"offer11E: hong kong apartment 1D", code: 10442,  address:"E 105 main street, central, hongkong",  size_in_m2:100
-
+seed_offer name:"offer1: hong kong apartment 1"    
+seed_offer name:"offer2: hong kong apartment 2"   
+seed_offer name:"offer3: hong kong apartment 3"   
+seed_offer name:"offer4: hong kong apartment 4"   
+seed_offer name:"offer5: hong kong apartment 5"   
+seed_offer name:"offerA: hong kong apartment A"   
+seed_offer name:"offerB: hong kong apartment B"   
+seed_offer name:"offerC: hong kong apartment C"   
+seed_offer name:"offerD: hong kong apartment D"   
+seed_offer name:"offerE: hong kong apartment D"
+seed_offer name:"offer11: hong kong apartment 11"
+seed_offer name:"offer12: hong kong apartment 12"
+seed_offer name:"offer13: hong kong apartment 13"
+seed_offer name:"offer14: hong kong apartment 14"
+seed_offer name:"offer15: hong kong apartment 15"
+seed_offer name:"offer1A: hong kong apartment 1A"
+seed_offer name:"offer1B: hong kong apartment 1B"
+seed_offer name:"offer1C: hong kong apartment 1C"
+seed_offer name:"offer1D: hong kong apartment 1D"
+seed_offer name:"offer1E: hong kong apartment 1D"
+seed_offer name:"offer111: hong kong apartment 1"
+seed_offer name:"offer112: hong kong apartment 2"
+seed_offer name:"offer113: hong kong apartment 3"
+seed_offer name:"offer114: hong kong apartment 4"
+seed_offer name:"offer115: hong kong apartment 5"
+seed_offer name:"offer11A: hong kong apartment A"
+seed_offer name:"offer11B: hong kong apartment B"
+seed_offer name:"offer11C: hong kong apartment C"
+seed_offer name:"offer11D: hong kong apartment D"
+seed_offer name:"offer11E: hong kong apartment D"
+seed_offer name:"offer111: hong kong apartment 11"
 
 puts "Offer seeded"
 
