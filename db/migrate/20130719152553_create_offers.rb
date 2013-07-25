@@ -10,6 +10,7 @@ class CreateOffers < ActiveRecord::Migration
       t.references :offer_type
       t.references :offer_source_type
       t.references :offer_source 
+      t.references :pricing_type
       t.text :description
       t.string :address      
       t.string :address_en

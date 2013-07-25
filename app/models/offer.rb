@@ -8,6 +8,7 @@ class Offer < ActiveRecord::Base
   belongs_to :offer_status
   belongs_to :offer_type
   belongs_to :offer_source_type
+  belongs_to :pricing_type
   attr_accessible :code, :name, :name_en
   attr_accessible :address, :address_en 
   attr_accessible :description, :nearby, :amenities, :rules, :remark

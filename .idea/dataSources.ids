@@ -597,6 +597,15 @@
       <index name="index_active_admin_comments_on_namespace" unique="false" columns="namespace"/>
       <index name="index_active_admin_comments_on_author_type_and_author_id" unique="false" columns="author_type,author_id"/>
     </table>
+    <table name="availibility_types" schema="" catalog="macropolo_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="code" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="name_en" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
     <table name="booking_comments" schema="" catalog="macropolo_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="booking_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
@@ -785,6 +794,7 @@
       <column name="offer_type_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="offer_source_type_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="offer_source_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="pricing_type_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
       <column name="address" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="address_en" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
@@ -817,6 +827,15 @@
       <index name="index_offers_on_offer_status_id" unique="false" columns="offer_status_id"/>
       <index name="index_offers_on_offer_type_id" unique="false" columns="offer_type_id"/>
       <index name="index_offers_on_offer_source_type_id" unique="false" columns="offer_source_type_id"/>
+    </table>
+    <table name="pricing_types" schema="" catalog="macropolo_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="code" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="name_en" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
     </table>
     <table name="roles" schema="" catalog="macropolo_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -856,6 +875,20 @@
       <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="role_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <index name="index_users_roles_on_user_id_and_role_id" unique="false" columns="user_id,role_id"/>
+    </table>
+    <table name="vouchers" schema="" catalog="macropolo_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="booking_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="amount_in_rmb" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="amount_used_in_rmb" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="expired_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="index_vouchers_on_booking_id" unique="false" columns="booking_id"/>
+      <index name="index_vouchers_on_user_id" unique="false" columns="user_id"/>
     </table>
     <table name="columns_priv" schema="" catalog="mysql" type="TABLE">
       <column name="Host" sqlType="CHAR" length="60" precision="0" nullable="false" jdbcType="1" def="Jyc="/>

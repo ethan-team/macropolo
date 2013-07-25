@@ -173,6 +173,26 @@ seed_availibility_type code: 40,  name: "off stock",          name_en: "off stoc
 
 puts "AvailibilityType seeded"
 
+
+# OfferType
+puts "PricingType"
+
+def seed_pricing_type arg
+  arg[:code] = 0 unless arg[:code]
+  abt = PricingType.find_by_code arg[:code]
+  abt = PricingType.create! arg unless abt
+  puts "  PricingType: #{abt.code} #{abt.name} #{abt.name_en}"
+  abt
+end
+
+seed_pricing_type code: 0,   name: "direct",          name_en: "direct"
+seed_pricing_type code:10,   name: "airbnb",          name_en: "airbnb"
+seed_pricing_type code:20,   name: "wimdu",           name_en: "wimdu"
+
+
+puts "PricingType seeded"
+
+
 #Offer
 puts "Offer"
 

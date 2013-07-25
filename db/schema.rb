@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130725041934) do
+ActiveRecord::Schema.define(:version => 20130725055212) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -218,6 +218,7 @@ ActiveRecord::Schema.define(:version => 20130725041934) do
     t.integer  "offer_type_id"
     t.integer  "offer_source_type_id"
     t.integer  "offer_source_id"
+    t.integer  "pricing_type_id"
     t.text     "description"
     t.string   "address"
     t.string   "address_en"
@@ -251,6 +252,14 @@ ActiveRecord::Schema.define(:version => 20130725041934) do
   add_index "offers", ["offer_source_type_id"], :name => "index_offers_on_offer_source_type_id"
   add_index "offers", ["offer_status_id"], :name => "index_offers_on_offer_status_id"
   add_index "offers", ["offer_type_id"], :name => "index_offers_on_offer_type_id"
+
+  create_table "pricing_types", :force => true do |t|
+    t.integer  "code"
+    t.string   "name"
+    t.string   "name_en"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
