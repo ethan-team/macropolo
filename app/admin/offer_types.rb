@@ -1,5 +1,5 @@
 ActiveAdmin.register OfferType do
-  menu :parent => "Offer"
+  menu  :label => "const Offer Type",:parent => "Offer"
   actions :all, :except => [:destroy]
 
   index :download_links => false do
@@ -17,5 +17,6 @@ ActiveAdmin.register OfferType do
   #filter :name
   #filter :name_en
   config.filters = false
+  config.clear_action_items! 
 
 end

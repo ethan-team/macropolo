@@ -99,15 +99,22 @@ ActiveRecord::Schema.define(:version => 20130725063252) do
   add_index "bookings", ["user_id"], :name => "index_bookings_on_user_id"
 
   create_table "currency_to_rmb_rates", :force => true do |t|
-    t.integer  "offer_source_currency_type_id"
+    t.integer  "currency_type_id"
     t.float    "rate"
     t.boolean  "reviewed"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   add_index "currency_to_rmb_rates", ["created_at"], :name => "index_currency_to_rmb_rates_on_created_at"
-  add_index "currency_to_rmb_rates", ["offer_source_currency_type_id"], :name => "index_currency_to_rmb_rates_on_offer_source_currency_type_id"
+  add_index "currency_to_rmb_rates", ["currency_type_id"], :name => "index_currency_to_rmb_rates_on_currency_type_id"
+
+  create_table "currency_types", :force => true do |t|
+    t.integer  "code"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "offer_images", :force => true do |t|
     t.integer  "offer_id"
@@ -173,13 +180,6 @@ ActiveRecord::Schema.define(:version => 20130725063252) do
   add_index "offer_reviews", ["offer_id"], :name => "index_offer_reviews_on_offer_id"
   add_index "offer_reviews", ["user_id"], :name => "index_offer_reviews_on_user_id"
 
-  create_table "offer_source_currency_types", :force => true do |t|
-    t.integer  "code"
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "offer_source_types", :force => true do |t|
     t.integer  "code"
     t.string   "name"
@@ -193,15 +193,15 @@ ActiveRecord::Schema.define(:version => 20130725063252) do
     t.string   "source_uri"
     t.text     "original_introduction"
     t.integer  "offer_source_type_id"
-    t.integer  "offer_source_currency_type_id"
+    t.integer  "currency_type_id"
     t.integer  "offer_id"
     t.text     "remark"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
+  add_index "offer_sources", ["currency_type_id"], :name => "index_offer_sources_on_currency_type_id"
   add_index "offer_sources", ["offer_id"], :name => "index_offer_sources_on_offer_id"
-  add_index "offer_sources", ["offer_source_currency_type_id"], :name => "index_offer_sources_on_offer_source_currency_type_id"
   add_index "offer_sources", ["offer_source_type_id"], :name => "index_offer_sources_on_offer_source_type_id"
 
   create_table "offer_statuses", :force => true do |t|

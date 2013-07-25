@@ -1,5 +1,5 @@
 ActiveAdmin.register AvailibilityType do
-  menu :parent => "Offer"
+  menu :label => "const Availibility Type",:parent => "Offer"
   actions :all, :except => [:destroy]
 
   index :download_links => false do
@@ -12,5 +12,6 @@ ActiveAdmin.register AvailibilityType do
   #filter :code
   #filter :name
   #filter :name_en
-  config.filters = false  
+  config.filters = false
+  config.clear_action_items!  
 end

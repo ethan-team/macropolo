@@ -7,7 +7,7 @@ FactoryGirl.define do
     source_uri "MyString"
     original_introduction "MyText"
     offer_source_type nil
-    offer_source_currency_type nil
+    currency_type nil
     offer nil
     remark "MyText"
   end

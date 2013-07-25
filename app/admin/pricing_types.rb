@@ -1,5 +1,5 @@
 ActiveAdmin.register PricingType do
-  menu :parent => "Offer"
+  menu :label => "const Price Type", :parent => "Offer"
   actions :all, :except => [:destroy]
 
   index :download_links => false do
@@ -12,5 +12,6 @@ ActiveAdmin.register PricingType do
   #filter :code
   #filter :name
   #filter :name_en
-  config.filters = false  
+  config.filters = false
+  config.clear_action_items!   
 end

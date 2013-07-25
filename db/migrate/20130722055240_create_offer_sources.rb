@@ -6,14 +6,14 @@ class CreateOfferSources < ActiveRecord::Migration
       t.string :source_uri
       t.text :original_introduction
       t.references :offer_source_type
-      t.references :offer_source_currency_type
+      t.references :currency_type
       t.references :offer
       t.text :remark
 
       t.timestamps
     end
     add_index :offer_sources, :offer_source_type_id
-    add_index :offer_sources, :offer_source_currency_type_id
+    add_index :offer_sources, :currency_type_id
     add_index :offer_sources, :offer_id
   end
 end

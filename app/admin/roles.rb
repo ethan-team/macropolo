@@ -1,5 +1,5 @@
 ActiveAdmin.register Role do
-  menu :parent => "Account"
+  menu :label => "const Role", :parent => "Account"
   actions :all, :except => [:destroy]
 
   index :download_links => false do
@@ -10,5 +10,6 @@ ActiveAdmin.register Role do
   end
 
   config.filters = false
+  config.clear_action_items!
 end
 
