@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88749486-43d6-4f28-8e2e-bf37dde5e459" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130725063252_create_availibilities.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/admin/availibilities.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/availibilities.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/availibility.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/availibility_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130722100513_create_bookings.rb" afterPath="$PROJECT_DIR$/db/migrate/20130722100513_create_bookings.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/booking.rb" afterPath="$PROJECT_DIR$/app/models/booking.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/bookings.rb" afterPath="$PROJECT_DIR$/app/admin/bookings.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer.rb" afterPath="$PROJECT_DIR$/app/models/offer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130717041808_add_name_to_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20130717041808_add_name_to_users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/availibility_type.rb" afterPath="$PROJECT_DIR$/app/models/availibility_type.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/users.rb" afterPath="$PROJECT_DIR$/app/admin/users.rb" />
     </list>
     <ignored path="macropolo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,125 +72,114 @@
               <ID>RailsDependency</ID>
               <OriginalElement>#macropolo</OriginalElement>
               <nodes>
-                <node x="781.5" y="1445.3249999999998">User</node>
-                <node x="2175.0" y="1175.67875">BookingHistory</node>
-                <node x="130.0" y="330.8037499999999">PricingType</node>
-                <node x="1731.5" y="418.57874999999996">Availibility</node>
-                <node x="881.5" y="1212.17875">BookingStatus</node>
-                <node x="140.0" y="740.8037499999999">OfferSourceType</node>
-                <node x="1541.0" y="1104.17875">Booking</node>
-                <node x="1731.5" y="828.5787499999999">OfferReview</node>
-                <node x="540.0" y="236.30374999999992">Offer</node>
-                <node x="1691.5" y="161.125">OfferSource</node>
-                <node x="789.0" y="48.143749999999955">OfferSourceCurrencyType</node>
-                <node x="1577.0" y="0.0">CurrencyToRmbRate</node>
-                <node x="0.0" y="885.8037499999999">OfferOwner</node>
-                <node x="2175.0" y="1296.67875">BookingComment</node>
-                <node x="100.0" y="499.8037499999999">OfferRegion</node>
-                <node x="1681.5" y="563.5787499999999">OfferImage</node>
-                <node x="136.0" y="1565.3249999999998">Role</node>
-                <node x="229.0" y="1859.3249999999998">Ability</node>
-                <node x="1717.5" y="1645.5749999999998">Voucher</node>
-                <node x="130.0" y="1366.80375">OfferType</node>
-                <node x="0.0" y="1859.3249999999998">AvailibilityType</node>
-                <node x="130.0" y="161.80374999999992">OfferStatus</node>
+                <node x="781.5" y="1689.25">User</node>
+                <node x="2175.0" y="1483.75">BookingHistory</node>
+                <node x="130.0" y="794.9999999999999">PricingType</node>
+                <node x="1657.5" y="1243.25">Availibility</node>
+                <node x="881.5" y="1520.25">BookingStatus</node>
+                <node x="140.0" y="0.0">OfferSourceType</node>
+                <node x="1541.0" y="1412.25">Booking</node>
+                <node x="1731.5" y="740.0119047619046">OfferReview</node>
+                <node x="540.0" y="314.4999999999999">Offer</node>
+                <node x="1691.5" y="209.5119047619046">OfferSource</node>
+                <node x="789.0" y="122.17499999999995">OfferSourceCurrencyType</node>
+                <node x="1577.0" y="62.799999999999955">CurrencyToRmbRate</node>
+                <node x="0.0" y="144.9999999999999">OfferOwner</node>
+                <node x="2175.0" y="1604.75">BookingComment</node>
+                <node x="100.0" y="1111.4107142857142">OfferRegion</node>
+                <node x="1681.5" y="475.0119047619046">OfferImage</node>
+                <node x="136.0" y="1809.25">Role</node>
+                <node x="0.0" y="2103.25">Ability</node>
+                <node x="1717.5" y="1889.5">Voucher</node>
+                <node x="130.0" y="1352.4107142857142">OfferType</node>
+                <node x="870.0" y="1275.5">AvailibilityType</node>
+                <node x="130.0" y="625.9999999999999">OfferStatus</node>
               </nodes>
               <notes />
               <edges>
                 <edge source="OfferSourceCurrencyType" target="OfferSource">
-                  <point x="211.5" y="32.25" />
-                  <point x="1461.0" y="144.89374999999995" />
-                  <point x="1541.0" y="211.375" />
-                  <point x="-126.5" y="-50.25" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="OfferSourceCurrencyType" target="CurrencyToRmbRate">
-                  <point x="211.5" y="-32.25" />
-                  <point x="1461.0" y="80.39374999999995" />
-                  <point x="1541.0" y="52.5" />
-                  <point x="-241.0" y="-0.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="BookingStatus" target="Booking">
-                  <point x="119.0" y="-0.0" />
-                  <point x="-277.0" y="-0.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Offer" target="OfferReview">
-                  <point x="460.5" y="184.20000000000005" />
-                  <point x="-86.5" y="-0.0" />
-                </edge>
-                <edge source="Offer" target="Booking">
-                  <point x="460.5" y="368.4000000000001" />
-                  <point x="-277.0" y="-115.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="OfferStatus" target="Offer">
-                  <point x="100.0" y="-0.0" />
-                  <point x="460.0" y="226.30374999999992" />
-                  <point x="-460.5" y="-383.75" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Offer" target="Booking">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="OfferType" target="Offer">
-                  <point x="100.0" y="-0.0" />
-                  <point x="460.0" y="1431.30375" />
-                  <point x="-460.5" y="383.75" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Offer" target="Availibility">
-                  <point x="460.5" y="-184.20000000000005" />
-                  <point x="1541.0" y="471.07874999999996" />
-                  <point x="-86.5" y="-0.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Booking" target="BookingComment">
-                  <point x="277.0" y="86.25" />
-                  <point x="-95.5" y="-0.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="User" target="Booking">
-                  <point x="219.0" y="-92.25" />
-                  <point x="1461.0" y="1537.5749999999998" />
-                  <point x="-277.0" y="115.0" />
-                </edge>
-                <edge source="PricingType" target="Offer">
-                  <point x="100.0" y="-0.0" />
-                  <point x="460.0" y="395.3037499999999" />
-                  <point x="-460.5" y="-230.25" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Offer" target="OfferSource">
-                  <point x="460.5" y="-368.4" />
-                  <point x="1541.0" y="311.875" />
-                  <point x="-126.5" y="50.25" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="PricingType" target="Offer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="User" target="Voucher">
-                  <point x="219.0" y="92.25" />
-                  <point x="-100.5" y="-0.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="AvailibilityType" target="Availibility">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Role" target="User">
-                  <point x="94.0" y="-0.0" />
-                  <point x="-219.0" y="-0.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="OfferRegion" target="Offer">
-                  <point x="130.0" y="-0.0" />
-                  <point x="460.0" y="600.3037499999999" />
-                  <point x="-460.5" y="-76.75" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Booking" target="BookingHistory">
-                  <point x="277.0" y="-86.25" />
-                  <point x="-95.5" y="-0.0" />
-                </edge>
-                <edge source="OfferOwner" target="Offer">
-                  <point x="230.0" y="-0.0" />
-                  <point x="-460.5" y="230.25" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Offer" target="OfferImage">
-                  <point x="460.5" y="-0.0" />
-                  <point x="1541.0" y="676.0787499999999" />
-                  <point x="-136.5" y="-0.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="OfferOwner" target="Offer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="OfferSourceType" target="Offer">
-                  <point x="90.0" y="-0.0" />
-                  <point x="460.0" y="793.3037499999999" />
-                  <point x="-460.5" y="76.75" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.43850806451612906" x="1183.0" y="981.9999999999999" />
-              <SelectedNodes>
-                <node>Booking</node>
-              </SelectedNodes>
+              <settings layout="Hierarchic Group" zoom="0.6169758812615955" x="854.5523981356188" y="643.0518718989625" />
+              <SelectedNodes />
               <Categories>
                 <Category>Association fields</Category>
                 <Category>Migration fields</Category>
@@ -257,8 +237,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2064" />
-    <option name="y" value="97" />
+    <option name="x" value="99" />
+    <option name="y" value="74" />
     <option name="width" value="2232" />
     <option name="height" value="1027" />
   </component>
@@ -632,12 +612,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2064" y="97" width="2232" height="1027" extended-state="0" />
-    <editor active="true" />
+    <frame x="99" y="74" width="2232" height="1027" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37030247" sideWeight="0.97411" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4537122" sideWeight="0.97411" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0109990835" sideWeight="0.97411" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.412082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -820,125 +800,114 @@
           <ID>RailsDependency</ID>
           <OriginalElement>#macropolo</OriginalElement>
           <nodes>
-            <node x="781.5" y="1445.3249999999998">User</node>
-            <node x="2175.0" y="1175.67875">BookingHistory</node>
-            <node x="130.0" y="330.8037499999999">PricingType</node>
-            <node x="1731.5" y="418.57874999999996">Availibility</node>
-            <node x="881.5" y="1212.17875">BookingStatus</node>
-            <node x="140.0" y="740.8037499999999">OfferSourceType</node>
-            <node x="1541.0" y="1104.17875">Booking</node>
-            <node x="1731.5" y="828.5787499999999">OfferReview</node>
-            <node x="540.0" y="236.30374999999992">Offer</node>
-            <node x="1691.5" y="161.125">OfferSource</node>
-            <node x="789.0" y="48.143749999999955">OfferSourceCurrencyType</node>
-            <node x="1577.0" y="0.0">CurrencyToRmbRate</node>
-            <node x="0.0" y="885.8037499999999">OfferOwner</node>
-            <node x="2175.0" y="1296.67875">BookingComment</node>
-            <node x="100.0" y="499.8037499999999">OfferRegion</node>
-            <node x="1681.5" y="563.5787499999999">OfferImage</node>
-            <node x="136.0" y="1565.3249999999998">Role</node>
-            <node x="229.0" y="1859.3249999999998">Ability</node>
-            <node x="1717.5" y="1645.5749999999998">Voucher</node>
-            <node x="130.0" y="1366.80375">OfferType</node>
-            <node x="0.0" y="1859.3249999999998">AvailibilityType</node>
-            <node x="130.0" y="161.80374999999992">OfferStatus</node>
+            <node x="781.5" y="1689.25">User</node>
+            <node x="2175.0" y="1483.75">BookingHistory</node>
+            <node x="130.0" y="794.9999999999999">PricingType</node>
+            <node x="1657.5" y="1243.25">Availibility</node>
+            <node x="881.5" y="1520.25">BookingStatus</node>
+            <node x="140.0" y="0.0">OfferSourceType</node>
+            <node x="1541.0" y="1412.25">Booking</node>
+            <node x="1731.5" y="740.0119047619046">OfferReview</node>
+            <node x="540.0" y="314.4999999999999">Offer</node>
+            <node x="1691.5" y="209.5119047619046">OfferSource</node>
+            <node x="789.0" y="122.17499999999995">OfferSourceCurrencyType</node>
+            <node x="1577.0" y="62.799999999999955">CurrencyToRmbRate</node>
+            <node x="0.0" y="144.9999999999999">OfferOwner</node>
+            <node x="2175.0" y="1604.75">BookingComment</node>
+            <node x="100.0" y="1111.4107142857142">OfferRegion</node>
+            <node x="1681.5" y="475.0119047619046">OfferImage</node>
+            <node x="136.0" y="1809.25">Role</node>
+            <node x="0.0" y="2103.25">Ability</node>
+            <node x="1717.5" y="1889.5">Voucher</node>
+            <node x="130.0" y="1352.4107142857142">OfferType</node>
+            <node x="870.0" y="1275.5">AvailibilityType</node>
+            <node x="130.0" y="625.9999999999999">OfferStatus</node>
           </nodes>
           <notes />
           <edges>
             <edge source="OfferSourceCurrencyType" target="OfferSource">
-              <point x="211.5" y="32.25" />
-              <point x="1461.0" y="144.89374999999995" />
-              <point x="1541.0" y="211.375" />
-              <point x="-126.5" y="-50.25" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="OfferSourceCurrencyType" target="CurrencyToRmbRate">
-              <point x="211.5" y="-32.25" />
-              <point x="1461.0" y="80.39374999999995" />
-              <point x="1541.0" y="52.5" />
-              <point x="-241.0" y="-0.0" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="BookingStatus" target="Booking">
-              <point x="119.0" y="-0.0" />
-              <point x="-277.0" y="-0.0" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="Offer" target="OfferReview">
-              <point x="460.5" y="184.20000000000005" />
-              <point x="-86.5" y="-0.0" />
-            </edge>
-            <edge source="Offer" target="Booking">
-              <point x="460.5" y="368.4000000000001" />
-              <point x="-277.0" y="-115.0" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="OfferStatus" target="Offer">
-              <point x="100.0" y="-0.0" />
-              <point x="460.0" y="226.30374999999992" />
-              <point x="-460.5" y="-383.75" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Offer" target="Booking">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="OfferType" target="Offer">
-              <point x="100.0" y="-0.0" />
-              <point x="460.0" y="1431.30375" />
-              <point x="-460.5" y="383.75" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="Offer" target="Availibility">
-              <point x="460.5" y="-184.20000000000005" />
-              <point x="1541.0" y="471.07874999999996" />
-              <point x="-86.5" y="-0.0" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="Booking" target="BookingComment">
-              <point x="277.0" y="86.25" />
-              <point x="-95.5" y="-0.0" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="User" target="Booking">
-              <point x="219.0" y="-92.25" />
-              <point x="1461.0" y="1537.5749999999998" />
-              <point x="-277.0" y="115.0" />
-            </edge>
-            <edge source="PricingType" target="Offer">
-              <point x="100.0" y="-0.0" />
-              <point x="460.0" y="395.3037499999999" />
-              <point x="-460.5" y="-230.25" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="Offer" target="OfferSource">
-              <point x="460.5" y="-368.4" />
-              <point x="1541.0" y="311.875" />
-              <point x="-126.5" y="50.25" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="PricingType" target="Offer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="User" target="Voucher">
-              <point x="219.0" y="92.25" />
-              <point x="-100.5" y="-0.0" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="AvailibilityType" target="Availibility">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="Role" target="User">
-              <point x="94.0" y="-0.0" />
-              <point x="-219.0" y="-0.0" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="OfferRegion" target="Offer">
-              <point x="130.0" y="-0.0" />
-              <point x="460.0" y="600.3037499999999" />
-              <point x="-460.5" y="-76.75" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="Booking" target="BookingHistory">
-              <point x="277.0" y="-86.25" />
-              <point x="-95.5" y="-0.0" />
-            </edge>
-            <edge source="OfferOwner" target="Offer">
-              <point x="230.0" y="-0.0" />
-              <point x="-460.5" y="230.25" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="Offer" target="OfferImage">
-              <point x="460.5" y="-0.0" />
-              <point x="1541.0" y="676.0787499999999" />
-              <point x="-136.5" y="-0.0" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="OfferOwner" target="Offer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="OfferSourceType" target="Offer">
-              <point x="90.0" y="-0.0" />
-              <point x="460.0" y="793.3037499999999" />
-              <point x="-460.5" y="76.75" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.43850806451612906" x="1183.0" y="981.9999999999999" />
-          <SelectedNodes>
-            <node>Booking</node>
-          </SelectedNodes>
+          <settings layout="Hierarchic Group" zoom="0.6169758812615955" x="854.5523981356188" y="643.0518718989625" />
+          <SelectedNodes />
           <Categories>
             <Category>Association fields</Category>
             <Category>Migration fields</Category>

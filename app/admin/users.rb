@@ -24,6 +24,7 @@ ActiveAdmin.register User do
     column :id 
     column "Registered email", :email
     column :name
+    column :mobile
     column "Roles" do |user|
       display_role_names_for_user user
     end
@@ -52,6 +53,7 @@ ActiveAdmin.register User do
     f.inputs "roles" do
       f.input  :name
       f.input  :email
+      f.input  :mobile
       f.input  :password
       f.input  :password_confirmation
       f.input  :roles

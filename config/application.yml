@@ -14,4 +14,5 @@ ADMIN_NAME: superadmin
 ADMIN_EMAIL: admin@macropolo.com
 ADMIN_PASSWORD: sql_pwd_macropolo
 
-ROLES: [admin, site_admin, operation_admin, opration_host, operation_guest, user]
+ROLES_ADMIN: [admin, site_admin, operation_admin, opration_host, operation_guest]
+ROLES_USER:  [user]
