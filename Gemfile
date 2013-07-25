@@ -9,8 +9,8 @@ gem 'rails', '3.2.13'
 
 #database
 #gem 'sqlite3'
-gem 'mysql2'
-#gem 'pg'      #for heroku
+#gem 'mysql2'
+gem 'pg'      #for heroku
 
 #plug-ins
 gem 'activeadmin'

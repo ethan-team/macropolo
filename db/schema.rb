@@ -252,14 +252,14 @@ ActiveRecord::Schema.define(:version => 20130725063252) do
     t.string   "contact_phone"
     t.string   "contact_mobile"
     t.string   "contact_email"
-    t.decimal  "checkin_after",        :precision => 10, :scale => 0
-    t.decimal  "checkout_before",      :precision => 10, :scale => 0
+    t.decimal  "checkin_after"
+    t.decimal  "checkout_before"
     t.text     "nearby"
     t.text     "amenities"
     t.text     "rules"
     t.text     "remark"
-    t.datetime "created_at",                                          :null => false
-    t.datetime "updated_at",                                          :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
   end
 
   add_index "offers", ["code"], :name => "index_offers_on_code", :unique => true
