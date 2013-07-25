@@ -5,6 +5,7 @@ class Booking < ActiveRecord::Base
   has_many :booking_history
   has_many :booking_comment
   attr_accessible :total_payment_in_rmb, :guest_contact_info, :guest_extra_info, :guest_name
+  attr_accessible :checkin_date, :checkout_date, :guests_count, :kids_count
   attr_accessible :user_id, :offer_id, :booking_status_id
 
     #required by ActiveAdmin

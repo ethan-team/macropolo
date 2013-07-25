@@ -11,6 +11,10 @@ ActiveAdmin.register Booking do
         column :guest_contact_info
         column :guest_extra_info
         column :total_payment_in_rmb
+        column :guests_count
+        column :kids_count
+        column :checkin_date
+        column :checkout_date
     end
 
     config.filters = false  

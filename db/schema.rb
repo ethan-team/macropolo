@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130725055212) do
+ActiveRecord::Schema.define(:version => 20130725063252) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -27,6 +27,18 @@ ActiveRecord::Schema.define(:version => 20130725055212) do
   add_index "active_admin_comments", ["author_type", "author_id"], :name => "index_active_admin_comments_on_author_type_and_author_id"
   add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
+
+  create_table "availibilities", :force => true do |t|
+    t.date    "date"
+    t.integer "offer_id"
+    t.integer "availibility_type_id"
+    t.integer "price_entitiy_id"
+  end
+
+  add_index "availibilities", ["availibility_type_id"], :name => "index_availibilities_on_availibility_type_id"
+  add_index "availibilities", ["date", "offer_id"], :name => "index_availibilities_on_date_and_offer_id", :unique => true
+  add_index "availibilities", ["date"], :name => "index_availibilities_on_date"
+  add_index "availibilities", ["offer_id"], :name => "index_availibilities_on_offer_id"
 
   create_table "availibility_types", :force => true do |t|
     t.integer  "code"
@@ -74,6 +86,10 @@ ActiveRecord::Schema.define(:version => 20130725055212) do
     t.string   "guest_contact_info"
     t.string   "guest_extra_info"
     t.float    "total_payment_in_rmb"
+    t.date     "checkin_date"
+    t.date     "checkout_date"
+    t.integer  "guests_count"
+    t.integer  "kids_count"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
   end
